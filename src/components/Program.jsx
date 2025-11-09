@@ -3,29 +3,40 @@ import React from 'react';
 const Program = () => {
   const schedule = [
     {
-      time: '13:00',
-      title: 'Obrad',
-      description: 'Svadobný obrad v Stodole Pohanské'
-    },
-    {
       time: '15:00',
-      title: 'Novomanželské fotenie',
-      description: 'Fotenie v krásnom okolí stodoly'
+      title: 'Obrad',
+      description: 'Svadobný obrad priamo v Stodole Pohanské pod záštitou nášho kamaráta Pala Jurča',
+      image: '/images/program_images/obrad.png'
     },
     {
       time: '16:00',
-      title: 'Večere',
-      description: 'Slávnostná večera a prípitky'
+      title: 'Novomanželské fotenie',
+      description: 'Fotenie v krásnom okolí stodoly',
+      image: '/images/program_images/fotenie.png'
     },
     {
       time: '18:00',
-      title: 'Krájenie dortu',
-      description: 'Prvý tanec a krájenie svadobnej torty'
+      title: 'Večera',
+      description: 'Slávnostná štvorchodová večera a prípitky',
+      image: '/images/program_images/vecera.png'
     },
     {
       time: '19:00',
-      title: 'Zábava',
-      description: 'Tanec, hudba a oslava do ranných hodin'
+      title: 'Program',
+      description: 'Pripravujeme pre vás prekvapenie ;)',
+      image: '/images/program_images/program.png'
+    },
+    {
+      time: '20:00',
+      title: 'Torta a zábava',
+      description: 'Tanec, hudba a oslava do ranných hodín',
+      image: '/images/program_images/zabava.png'
+    },
+      {
+      time: '04:00',
+      title: 'Koniec',
+      description: 'Lúčime sa s vami, papik',
+      image: '/images/program_images/koniec.png'
     }
   ];
 
@@ -62,13 +73,31 @@ const Program = () => {
                   {/* Left side */}
                   <div className={`${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12 order-2'}`}>
                     <div className={`inline-block ${index % 2 === 0 ? '' : 'text-left'}`}>
-                      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-sage">
-                        <h3 className="font-serif text-2xl text-gray-800 mb-3 font-bold">
-                          {item.title}
-                        </h3>
-                        <p className="font-sans text-gray-600 leading-relaxed">
-                          {item.description}
-                        </p>
+                      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-sage flex items-start gap-6">
+                        {/* Image on left side of card when index is even */}
+                        {index % 2 === 0 && (
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-40 h-auto object-contain rounded-lg flex-shrink-0"
+                          />
+                        )}
+                        <div className="flex-grow self-center">
+                          <h3 className="font-serif text-2xl text-gray-800 mb-3 font-bold">
+                            {item.title}
+                          </h3>
+                          <p className="font-sans text-gray-600 leading-relaxed">
+                            {item.description}
+                          </p>
+                        </div>
+                        {/* Image on right side of card when index is odd */}
+                        {index % 2 !== 0 && (
+                          <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-40 h-auto object-contain rounded-lg flex-shrink-0"
+                          />
+                        )}
                       </div>
                     </div>
                   </div>
@@ -99,13 +128,20 @@ const Program = () => {
                     )}
                   </div>
                   <div className="flex-grow pb-6">
-                    <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-sage">
-                      <h3 className="font-serif text-xl text-gray-800 mb-2 font-bold">
-                        {item.title}
-                      </h3>
-                      <p className="font-sans text-gray-600 text-sm leading-relaxed">
-                        {item.description}
-                      </p>
+                    <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-sage flex items-start gap-4">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-28 h-auto object-contain rounded-lg flex-shrink-0"
+                      />
+                      <div className="flex-grow self-center">
+                        <h3 className="font-serif text-xl text-gray-800 mb-2 font-bold">
+                          {item.title}
+                        </h3>
+                        <p className="font-sans text-gray-600 text-sm leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

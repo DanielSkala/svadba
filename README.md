@@ -50,7 +50,7 @@ npm run build
 - Already included: `hero_main_image.jpeg`, `stodola_pohanske.jpg`
 
 ### 5. **Update Hotels** (Optional)
-**File**: `src/components/Travel.jsx`
+**File**: `src/components/Accomodation.jsx`
 - Update hotel names, links, and distances (line 6)
 
 ---
@@ -110,7 +110,7 @@ svadba/
 │   │   ├── Hero.jsx              # Landing section
 │   │   ├── DetailsAndVenue.jsx   # Event details + map
 │   │   ├── Program.jsx           # Timeline
-│   │   ├── Travel.jsx            # Travel & hotels
+│   │   ├── Accomodation.jsx            # Accomodation & hotels
 │   │   ├── Gifts.jsx             # Payment info
 │   │   ├── RSVP.jsx              # Guest form
 │   │   ├── FAQ.jsx               # Questions

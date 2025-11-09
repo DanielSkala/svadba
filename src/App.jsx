@@ -2,11 +2,13 @@ import React from 'react';
 import Hero from './components/Hero';
 import DetailsAndVenue from './components/DetailsAndVenue';
 import Program from './components/Program';
-import Travel from './components/Travel';
+import Accomodation from './components/Accomodation.jsx';
 import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import 'leaflet/dist/leaflet.css';
+
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
       <Hero />
       <DetailsAndVenue />
       <Program />
-      <Travel />
+      <Accomodation />
       <Gifts />
       <RSVP />
       <FAQ />

@@ -61,3 +61,13 @@
   animation-delay: 0.6s;
   opacity: 0;
 }
+
+/* Softer tooltip styling to match your brand */
+.leaflet-tooltip-own {
+  background: rgba(255,255,255,0.95);
+  color: #1f2937; /* slate-800 */
+  border: 1px solid rgba(139,174,138,0.25); /* sage */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  padding: 8px 10px;
+}

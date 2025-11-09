@@ -1,9 +1,26 @@
-import React from 'react';
-import { MapPin, Calendar, Clock, Shirt, Navigation } from 'lucide-react';
+import React, { useState } from 'react';
+import { MapPin, Calendar, Clock, Shirt, Navigation, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const DetailsAndVenue = () => {
   // Coordinates for Stodola Pohanské, Myto pod Ďumbierom - Satellite view
   const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2631.0!2d19.645258446464485!3d48.850218419521475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUxJzAwLjgiTiAxOcKwMzgnNDMuMCJF!5e1!3m2!1sen!2ssk!4v1234567890";
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [
+    '/images/stodola_pohanske.jpg',
+    '/images/IMG_0035.png',
+    '/images/IMG_0062.png',
+    '/images/IMG_0072.png',
+    '/images/IMG_7636.png'
+  ];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
 
   const handleDirections = () => {
     window.open('https://www.google.com/maps/dir//48.850218419521475,19.645258446464485', '_blank');
@@ -103,15 +120,36 @@ const DetailsAndVenue = () => {
 
           {/* Images and Map Layout - Square Left, Rectangular Right (split) */}
           <div className="grid lg:grid-cols-2 gap-6">
-            {/* Left: Square Stodola Pohanské photo */}
-            <div className="relative group rounded-2xl overflow-hidden shadow-xl">
+            {/* Left: Photo Carousel */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
               <div className="relative bg-gray-100" style={{ paddingBottom: '100%' }}>
                 <img
-                  src="/images/stodola_pohanske.jpg"
-                  alt="Stodola Pohanské"
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src={images[currentImageIndex]}
+                  alt={`Wedding Photo ${currentImageIndex + 1}`}
+                  className="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-6 h-6 text-gray-800" strokeWidth={2.5} />
+                </button>
+
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-6 h-6 text-gray-800" strokeWidth={2.5} />
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-sans">
+                  {currentImageIndex + 1} / {images.length}
+                </div>
               </div>
             </div>
 
