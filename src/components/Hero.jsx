@@ -37,7 +37,7 @@ const Hero = () => {
           <img
             src="/images/wedding_leaves/three_roses_t.png"
             alt=""
-            className="absolute -top-12 -right-12 w-32 md:w-40 lg:w-48 opacity-90 pointer-events-none"
+            className="absolute -top-20 -right-20 w-48 md:w-60 lg:w-72 opacity-90 pointer-events-none"
             aria-hidden="true"
           />
 
@@ -45,7 +45,7 @@ const Hero = () => {
           <img
             src="/images/wedding_leaves/three_roses_t.png"
             alt=""
-            className="absolute -bottom-12 -left-12 w-32 md:w-40 lg:w-48 opacity-90 pointer-events-none transform scale-x-[-1]"
+            className="absolute -bottom-20 -left-20 w-48 md:w-60 lg:w-72 opacity-90 pointer-events-none transform scale-x-[-1]"
             aria-hidden="true"
           />
 
