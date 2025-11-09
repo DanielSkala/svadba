@@ -41,8 +41,23 @@ const Program = () => {
   ];
 
   return (
-    <section id="program" className="py-24 px-4 bg-cream bg-opacity-30">
-      <div className="max-w-5xl mx-auto">
+    <section id="program" className="relative py-24 px-4 bg-cream bg-opacity-30 overflow-hidden">
+      {/* Decorative images */}
+      <img
+        src="/images/wedding_leaves/rose_corner.png"
+        alt=""
+        className="absolute bottom-0 right-0 w-80 md:w-96 lg:w-[32rem] opacity-60 pointer-events-none transform scale-y-[-1]"
+        aria-hidden="true"
+      />
+
+      <img
+        src="/images/wedding_leaves/leaf_in_corner.png"
+        alt=""
+        className="absolute bottom-0 left-0 w-64 md:w-80 lg:w-96 opacity-50 pointer-events-none transform scale-y-[-1]"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-20">
           <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl text-gray-800 mb-4 font-bold">

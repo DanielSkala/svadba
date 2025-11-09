@@ -5,7 +5,7 @@ const Gifts = () => {
   const [copied, setCopied] = useState(false);
 
   // Placeholder IBAN - replace with your actual IBAN
-  const iban = "SK00 0000 0000 0000 0000 0000";
+  const iban = "SK95 1100 0000 0029 3482 0124";
 
   const handleCopyIBAN = () => {
     navigator.clipboard.writeText(iban.replace(/\s/g, ''));
@@ -14,8 +14,16 @@ const Gifts = () => {
   };
 
   return (
-    <section id="gifts" className="py-20 px-4 bg-cream bg-opacity-30">
-      <div className="max-w-4xl mx-auto">
+    <section id="gifts" className="relative py-20 px-4 bg-cream bg-opacity-30 overflow-hidden">
+      {/* Background pattern with sprinkled leaves */}
+      <img
+        src="/images/wedding_leaves/TS-Wedding-Leaves.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
           <Gift className="w-16 h-16 mx-auto mb-6 text-sage" strokeWidth={1.5} />
@@ -62,13 +70,11 @@ const Gifts = () => {
           <div className="bg-cream bg-opacity-50 p-8 rounded-lg text-center">
             <h3 className="font-serif text-2xl text-gray-800 mb-4 font-bold">QR platba</h3>
             <div className="bg-white p-6 rounded border border-sage border-opacity-20 mb-4 flex items-center justify-center">
-              {/* Placeholder for QR code - replace with actual QR code image */}
-              <div className="w-40 h-40 bg-gray-200 flex items-center justify-center rounded">
-                <span className="text-gray-500 text-xs text-center px-4">
-                  QR kód<br/>
-                  (nahraďte vlastným)
-                </span>
-              </div>
+              <img
+                src="/images/qr_pay.jpeg"
+                alt="QR kód pre platbu"
+                className="w-40 h-40 object-contain rounded"
+              />
             </div>
             <p className="font-sans text-sm text-gray-600">
               Naskenujte QR kód vaším bankovým aplikáciou

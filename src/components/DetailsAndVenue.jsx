@@ -27,7 +27,8 @@ const DetailsAndVenue = () => {
   };
 
   return (
-    <section id="details" className="py-24 px-4 bg-white">
+    <section id="details" className="relative py-24 px-4 bg-white overflow-hidden">
+
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-20">
@@ -55,11 +56,11 @@ const DetailsAndVenue = () => {
                 Piatok
               </p>
               <p className="font-serif text-3xl text-sage text-center mb-4 font-bold">
-                30. 5. 2025
+                30. 5. 2026
               </p>
               <div className="flex items-center justify-center gap-2 text-gray-600">
                 <Clock className="w-5 h-5 text-sage" strokeWidth={1.5} />
-                <p className="font-sans text-base">Začiatok o 13:00</p>
+                <p className="font-sans text-base">Začiatok o 15:00</p>
               </div>
             </div>
           </div>
@@ -105,7 +106,7 @@ const DetailsAndVenue = () => {
                 Cocktail / Semi-formal
               </p>
               <p className="font-sans text-sm text-gray-600 text-center leading-relaxed">
-                Prosíme, vyvarujte sa bielej farby, ktorá je vyhradená pre nevestu
+                Prídte ako len sa cítite najlepšie!
               </p>
             </div>
           </div>
@@ -209,6 +210,19 @@ const DetailsAndVenue = () => {
             Navigovať do stodoly
           </button>
         </div>
+          <img
+            src="/images/wedding_leaves/rose_corner.png"
+            alt=""
+            className="absolute bottom-0 right-0 w-80 md:w-96 lg:w-[32rem] opacity-60 pointer-events-none transform scale-y-[-1]"
+            aria-hidden="true"
+          />
+
+          <img
+            src="/images/wedding_leaves/leaf_in_corner.png"
+            alt=""
+            className="absolute bottom-0 left-0 w-64 md:w-80 lg:w-96 opacity-50 pointer-events-none transform scale-y-[-1]"
+            aria-hidden="true"
+          />
       </div>
     </section>
   );

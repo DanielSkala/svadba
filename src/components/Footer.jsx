@@ -3,8 +3,23 @@ import { Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-sage border-opacity-20 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+    <footer className="relative bg-white border-t border-sage border-opacity-20 py-12 px-4 overflow-hidden">
+      {/* Decorative images */}
+      <img
+        src="/images/wedding_leaves/rose_corner.png"
+        alt=""
+        className="absolute bottom-0 right-0 w-80 md:w-96 lg:w-[32rem] opacity-60 pointer-events-none transform scale-y-[-1]"
+        aria-hidden="true"
+      />
+
+      <img
+        src="/images/wedding_leaves/leaf_in_corner.png"
+        alt=""
+        className="absolute bottom-0 left-0 w-64 md:w-80 lg:w-96 opacity-50 pointer-events-none transform scale-y-[-1]"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Floral decoration */}
         <div className="flex items-center justify-center mb-6">
           <div className="h-px w-16 bg-sage bg-opacity-30"></div>

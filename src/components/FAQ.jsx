@@ -36,8 +36,16 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="py-20 px-4 bg-cream bg-opacity-30">
-      <div className="max-w-4xl mx-auto">
+    <section id="faq" className="relative py-20 px-4 bg-cream bg-opacity-30 overflow-hidden">
+      {/* Background pattern with sprinkled leaves */}
+      <img
+        src="/images/wedding_leaves/TS-Wedding-Leaves.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Section header */}
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-gray-800 mb-6 font-bold">
