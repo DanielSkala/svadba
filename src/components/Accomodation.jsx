@@ -83,7 +83,7 @@ export default function TravelMap() {
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-gray-800 mb-3 font-bold">
             Doprava · Ubytovanie
           </h2>
-          <p className="font-serif text-gray-600">Pozrite si odporúčané ubytovania priamo na mape</p>
+          <p className="font-serif text-lg text-gray-600">Pozrite si odporúčané ubytovania priamo na mape</p>
         </div>
 
         <div className="relative rounded-2xl overflow-hidden ring-1 ring-sage/20 shadow-lg">
@@ -102,7 +102,7 @@ export default function TravelMap() {
               eventHandlers={{ click: () => window.open(venue.url, "_blank", "noopener") }}
             >
               <Tooltip direction="top" offset={[0, -6]} className="leaflet-tooltip-own">
-                <div className="font-serif text-sm">
+                <div className="font-serif text-base">
                   <div className="font-semibold">{venue.name}</div>
                   <div className="text-gray-600">Kliknite pre otvorenie stránky</div>
                 </div>
@@ -118,7 +118,7 @@ export default function TravelMap() {
                 eventHandlers={{ click: () => window.open(s.url, "_blank", "noopener") }}
               >
                 <Tooltip direction="top" offset={[0, -6]} className="leaflet-tooltip-own">
-                  <div className="font-serif text-sm">
+                  <div className="font-serif text-base">
                     <div className="font-semibold">{s.name}</div>
                     <div className="text-gray-600">{s.type} · {s.place}</div>
                     <div className="text-sage">Kliknite pre viac info</div>
@@ -131,7 +131,7 @@ export default function TravelMap() {
           </MapContainer>
 
           {/* Legend */}
-          <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-3 py-2 rounded-full shadow font-serif text-sm flex items-center gap-3">
+          <div className="absolute top-3 left-3 bg-white/90 backdrop-blur px-3 py-2 rounded-full shadow font-serif text-base flex items-center gap-3">
             <span className="inline-flex items-center gap-1">
               <span className="inline-block w-3 h-3 rounded-full" style={{ background: "#6D9570", border: "1px solid #4d6f50" }} />
               Miesto svadby

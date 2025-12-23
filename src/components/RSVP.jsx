@@ -9,7 +9,7 @@ const RSVP = () => {
           <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-gray-800 mb-6 font-bold">
             Potvrdenie účasti
           </h2>
-          <p className="font-serif text-gray-700 mt-4">
+          <p className="font-serif text-lg text-gray-700 mt-4">
             Prosíme, potvrďte svoju účasť do <strong>30. apríla 2025</strong>
           </p>
         </div>
@@ -31,7 +31,7 @@ const RSVP = () => {
 
         {/* Note */}
         <div className="mt-6 text-center">
-          <p className="font-serif text-sm text-gray-500 italic">
+          <p className="font-serif text-base text-gray-500 italic">
             Ak máte problémy s formulárom, kontaktujte nás prosím priamo
           </p>
         </div>

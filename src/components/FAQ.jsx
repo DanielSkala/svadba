@@ -7,7 +7,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'Môžem vám darovať kvety?',
-      answer: 'Prosíme, radšej nám neprinášajte kvety, u nás nevydržia dlho. Viac nás poteší finančný dar na našu spoločnú budúcnosť.'
+      answer: 'Viac nás poteší finančný dar na našu spoločnú budúcnosť.'
     },
     {
       question: 'Je obrad vonku?',
@@ -15,11 +15,11 @@ const FAQ = () => {
     },
     {
       question: 'Bude zabezpečený fotograf?',
-      answer: 'Áno, budeme mať profesionálneho fotografa. Fotografie vám potom pošleme. Samozrejme, môžete si robiť vlastné fotky a prosíme o zdieľanie!'
+      answer: 'Áno, budeme mať profesionálneho fotografa, ktorý vám im po svadbe pošle. Samozrejme, môžete si robiť vlastné fotky a prosíme o zdieľanie!'
     },
     {
       question: 'Do kedy mám potvrdiť účasť?',
-      answer: 'Prosíme o potvrdenie účasti najneskôr do 30. marca 2025, aby sme mohli dokončiť organizačné detaily.'
+      answer: 'Prosíme o potvrdenie účasti najneskôr do 15. Apríla 2025, aby sme mohli dokončiť organizačné detaily.'
     },
     {
       question: 'Kde môžem prenocovať?',
@@ -28,6 +28,10 @@ const FAQ = () => {
     {
       question: 'Dá sa aj stanovať priamo na mieste?',
       answer: 'Áno, dá sa stanovať aj na terase stodoly alebo priamo na lúke pod hviezdami. Prosíme, uveďte to v RSVP formulári, aby sme mohli zabezpečiť dostatok priestoru.'
+    },
+    {
+      question: 'Ako sa v noci dostanem späť na ubytovanie?',
+      answer: 'Po 22:00 máme zabezpečeného šoféra, ktorý vás odvezie späť na vaše ubytovanie v okolí.'
     }
   ];
 
@@ -80,7 +84,7 @@ const FAQ = () => {
                 }`}
               >
                 <div className="px-6 pb-4">
-                  <p className="font-serif text-gray-700 leading-relaxed">
+                  <p className="font-serif text-lg text-gray-700 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -91,12 +95,12 @@ const FAQ = () => {
 
         {/* Additional contact */}
         <div className="mt-12 text-center">
-          <p className="font-serif text-gray-700 mb-4">
+          <p className="font-serif text-lg text-gray-700 mb-4">
             Máte ďalšie otázky?
           </p>
           <a
             href="#rsvp"
-            className="inline-block px-6 py-2 border border-sage text-sage rounded-full font-serif text-sm hover:bg-sage hover:text-white transition-all duration-300"
+            className="inline-block px-6 py-2 border border-sage text-sage rounded-full font-serif text-base hover:bg-sage hover:text-white transition-all duration-300"
           >
             Kontaktujte nás
           </a>

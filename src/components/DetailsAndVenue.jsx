@@ -36,7 +36,7 @@ const DetailsAndVenue = () => {
             Detaily svadby
           </h2>
           <div className="w-24 h-1 bg-sage mx-auto mb-6"></div>
-          <p className="font-serif text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="font-serif text-xl text-gray-600 max-w-2xl mx-auto">
             Všetko, čo potrebujete vedieť o našom veľkom dni
           </p>
         </div>
@@ -52,7 +52,7 @@ const DetailsAndVenue = () => {
                 </div>
               </div>
               <h3 className="font-serif text-2xl text-gray-800 mb-4 text-center font-bold">Kedy</h3>
-              <p className="font-serif text-lg text-gray-700 text-center mb-2 font-medium">
+              <p className="font-serif text-xl text-gray-700 text-center mb-2 font-medium">
                 Piatok
               </p>
               <p className="font-serif text-3xl text-sage text-center mb-4 font-bold">
@@ -60,7 +60,7 @@ const DetailsAndVenue = () => {
               </p>
               <div className="flex items-center justify-center gap-2 text-gray-600">
                 <Clock className="w-5 h-5 text-sage" strokeWidth={1.5} />
-                <p className="font-serif text-base">Začiatok o 15:00</p>
+                <p className="font-serif text-lg">Začiatok o 15:00</p>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const DetailsAndVenue = () => {
               <p className="font-serif text-2xl text-gray-800 text-center mb-2 font-semibold">
                 Stodola Pohanské
               </p>
-              <p className="font-serif text-sm text-gray-600 mb-6 text-center">
+              <p className="font-serif text-base text-gray-600 mb-6 text-center">
                 Myto pod Ďumbierom<br/>Slovensko
               </p>
               <div className="text-center">
@@ -85,7 +85,7 @@ const DetailsAndVenue = () => {
                   href="https://stodola.pohanske.sk"
                   target="_blank"
                   rel="noopener noreferrer"You
-                  className="inline-block px-6 py-2.5 bg-sage text-white rounded-full font-serif text-sm font-medium hover:bg-sage/90 transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="inline-block px-6 py-2.5 bg-sage text-white rounded-full font-serif text-base font-medium hover:bg-sage/90 transition-all duration-300 shadow-md hover:shadow-lg"
                 >
                   Navštíviť web
                 </a>
@@ -105,7 +105,7 @@ const DetailsAndVenue = () => {
               <p className="font-serif text-xl text-gray-700 text-center mb-4 font-medium">
                 Cocktail / Semi-formal
               </p>
-              <p className="font-serif text-sm text-gray-600 text-center leading-relaxed">
+              <p className="font-serif text-base text-gray-600 text-center leading-relaxed">
                 Prídte ako len sa cítite najlepšie!
               </p>
             </div>
@@ -116,14 +116,14 @@ const DetailsAndVenue = () => {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="text-center mb-12">
             <h3 className="font-serif text-4xl text-gray-800 mb-3 font-bold">Miesto konania</h3>
-            <p className="font-serif text-gray-600">Stodola Pohanské - krásne miesto v srdci Slovenska</p>
+            <p className="font-serif text-lg text-gray-600">Stodola Pohanské - krásne miesto v srdci Slovenska</p>
           </div>
 
           {/* Images and Map Layout - Square Left, Rectangular Right (split) */}
           <div className="grid lg:grid-cols-2 gap-6">
             {/* Left: Photo Carousel */}
-            <div className="relative rounded-2xl overflow-hidden shadow-xl group">
-              <div className="relative bg-gray-100" style={{ paddingBottom: '100%' }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl group h-[400px] lg:h-auto">
+              <div className="relative bg-gray-100 h-full lg:pb-[100%]">
                 <img
                   src={images[currentImageIndex]}
                   alt={`Wedding Photo ${currentImageIndex + 1}`}
@@ -133,7 +133,7 @@ const DetailsAndVenue = () => {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 hover:scale-110"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="w-6 h-6 text-gray-800" strokeWidth={2.5} />
@@ -141,7 +141,7 @@ const DetailsAndVenue = () => {
 
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 hover:scale-110"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 hover:scale-110"
                   aria-label="Next image"
                 >
                   <ChevronRight className="w-6 h-6 text-gray-800" strokeWidth={2.5} />
@@ -157,7 +157,7 @@ const DetailsAndVenue = () => {
             {/* Right: Stacked Obrad photo and Map (perfectly calculated to match left square) */}
             <div className="flex flex-col gap-6">
               {/* Stodola Obrad - Rectangular half height (47% accounting for 1.5rem gap) */}
-              <div className="relative group rounded-2xl overflow-hidden shadow-xl flex-1">
+              <div className="relative group rounded-2xl overflow-hidden shadow-xl flex-1 min-h-[250px] lg:min-h-0">
                 <div className="relative bg-gray-100 h-full">
                   <img
                     src="/images/stodola_obrad.jpg"
@@ -169,8 +169,8 @@ const DetailsAndVenue = () => {
               </div>
 
               {/* Map - Rectangular half height (47% accounting for 1.5rem gap) */}
-              <div className="space-y-4 flex-1">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-sage/10 h-full">
+              <div className="space-y-4 flex-1 min-h-[400px] lg:min-h-0">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl border-2 border-sage/10 h-full min-h-[400px] lg:min-h-0">
                   <iframe
                     src={mapUrl}
                     width="100%"
@@ -194,7 +194,7 @@ const DetailsAndVenue = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Info Box */}
           <div className="bg-sage/5 border-2 border-sage/20 rounded-2xl p-8">
-            <p className="font-serif text-lg text-gray-700 leading-relaxed">
+            <p className="font-serif text-xl text-gray-700 leading-relaxed">
               Parkovanie je zabezpečené priamo pri stodole.
               <br className="hidden sm:block" />
               Tešíme sa na vás!

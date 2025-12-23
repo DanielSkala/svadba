@@ -34,7 +34,7 @@ const Gifts = () => {
 
         {/* Main message */}
         <div className="text-center mb-12">
-          <p className="font-serif text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-8">
+          <p className="font-serif text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto mb-8">
             Vaša prítomnosť je pre nás tým najkrajším darom. Ak nás však chcete obdarovať,
             budeme vďační za príspevok na našu spoločnú budúcnosť.
           </p>
@@ -50,7 +50,7 @@ const Gifts = () => {
             </div>
             <button
               onClick={handleCopyIBAN}
-              className="inline-flex items-center gap-2 px-6 py-2 bg-sage text-white rounded-full font-serif text-sm hover:bg-opacity-90 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-2 bg-sage text-white rounded-full font-serif text-base hover:bg-opacity-90 transition-all duration-300"
             >
               {copied ? (
                 <>
@@ -76,7 +76,7 @@ const Gifts = () => {
                 className="w-40 h-40 object-contain rounded"
               />
             </div>
-            <p className="font-serif text-sm text-gray-600">
+            <p className="font-serif text-base text-gray-600">
               Naskenujte QR kód vašou bankovou aplikáciou
             </p>
           </div>
@@ -84,7 +84,7 @@ const Gifts = () => {
 
         {/* Thank you message */}
         <div className="text-center mt-12">
-          <p className="font-serif text-gray-600 italic">
+          <p className="font-serif text-lg text-gray-600 italic">
             Ďakujeme za vašu štedrosť a podporu! ♥
           </p>
         </div>

@@ -39,13 +39,13 @@ const Footer = () => {
           <p className="font-serif text-xl text-gray-700 mb-2">
             Veronika & Daniel
           </p>
-          <p className="font-serif text-sm text-gray-600">
+          <p className="font-serif text-base text-gray-600">
             30. mája 2025
           </p>
         </div>
 
         {/* Quick links */}
-        <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+        <div className="flex flex-wrap justify-center gap-6 mb-8 text-base">
           <a
             href="#details"
             className="font-serif text-gray-600 hover:text-sage transition-colors"

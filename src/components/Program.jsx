@@ -64,7 +64,7 @@ const Program = () => {
             Program dňa
           </h2>
           <div className="w-24 h-1 bg-sage mx-auto mb-4"></div>
-          <p className="font-serif text-base text-gray-600">
+          <p className="font-serif text-lg text-gray-600">
             Načasovanie najdôležitejších momentov nášho dňa
           </p>
         </div>
@@ -101,7 +101,7 @@ const Program = () => {
                           <h3 className="font-serif text-xl text-gray-800 mb-2 font-bold">
                             {item.title}
                           </h3>
-                          <p className="font-serif text-gray-600 text-sm leading-relaxed">
+                          <p className="font-serif text-gray-600 text-base leading-relaxed">
                             {item.description}
                           </p>
                         </div>
@@ -153,7 +153,7 @@ const Program = () => {
                         <h3 className="font-serif text-lg text-gray-800 mb-1 font-bold">
                           {item.title}
                         </h3>
-                        <p className="font-serif text-gray-600 text-sm leading-relaxed">
+                        <p className="font-serif text-gray-600 text-base leading-relaxed">
                           {item.description}
                         </p>
                       </div>
@@ -167,7 +167,7 @@ const Program = () => {
 
         {/* Note */}
         <div className="mt-8 text-center">
-          <p className="font-serif text-sm text-gray-600 italic">
+          <p className="font-serif text-base text-gray-600 italic">
             *Časy sú orientačné a môžu sa mierne meniť
           </p>
         </div>

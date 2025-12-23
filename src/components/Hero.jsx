@@ -29,29 +29,29 @@ const Hero = () => {
       aria-label="Veronika a Daniel – svadba"
     >
       {/* Wide + short glass banner (higher to reveal photo center) */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-[8vh] sm:top-[10vh] md:top-[12vh] z-10 w-[92%] max-w-[1120px]">
+      <div className="absolute left-1/2 -translate-x-1/2 top-[12vh] sm:top-[10vh] md:top-[12vh] z-10 w-[92%] max-w-[1120px]">
         <div className="relative text-center rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-3xl shadow-2xl border border-white/10
-                        px-6 sm:px-10 md:px-14 py-6 sm:py-8 md:py-10 space-y-4">
+                        px-4 sm:px-10 md:px-14 py-5 sm:py-8 md:py-10 space-y-2 sm:space-y-4">
 
-          <Heart className="w-8 h-8 mx-auto text-red-500" fill="currentColor" strokeWidth={1.5} aria-hidden="true" />
+          <Heart className="w-7 h-7 sm:w-8 sm:h-8 mx-auto text-red-500" fill="currentColor" strokeWidth={1.5} aria-hidden="true" />
 
           {/* Only script here */}
-          <h1 className="font-script text-slate-900 leading-none text-[clamp(2.75rem,100vw,6.5rem)]">
+          <h1 className="font-script text-slate-900 leading-none text-[clamp(2.5rem,12vw,6.5rem)]">
             Veronika <span className="align-[-0.08em]">&</span> Daniel
           </h1>
 
             {/* Invite line */}
-          <p className="font-serif text-slate-900 text-lg sm:text-xl md:text-2xl leading-relaxed">
+          <p className="font-serif text-slate-900 text-base sm:text-xl md:text-2xl leading-relaxed">
             Srdečne vás pozývame na obrad a oslavu nášho manželstva
           </p>
 
           {/* Date */}
-          <p className="font-serif text-slate-900 text-xl sm:text-2xl md:text-3xl font-semibold">
+          <p className="font-serif text-slate-900 text-lg sm:text-2xl md:text-3xl font-semibold">
             Máj 30, 2026
           </p>
 
           {/* Venue */}
-          <p className="font-serif text-slate-900 text-base sm:text-lg md:text-xl">
+          <p className="font-serif text-slate-900 text-sm sm:text-lg md:text-xl">
             Stodola Pohanské, Mýto pod Ďumbierom
           </p>
 
@@ -82,17 +82,17 @@ const Hero = () => {
       </div>
 
       {/* Bottom-aligned CTAs */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-24 sm:bottom-28 z-10">
-        <div className="flex flex-col sm:flex-row justify-center gap-3">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-20 sm:bottom-28 z-10 w-full px-4">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
           <a
             href="#rsvp"
-            className="px-8 py-3 rounded-full font-serif font-semibold text-base shadow-xl bg-sage text-white hover:scale-[1.02] transition-transform"
+            className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif font-semibold text-base sm:text-lg shadow-xl bg-sage text-white hover:scale-[1.02] transition-transform text-center"
           >
             Potvrdiť účasť
           </a>
           <a
             href="#details"
-            className="px-8 py-3 rounded-full font-serif font-semibold text-base shadow-xl bg-white/80 backdrop-blur-md text-slate-900 hover:bg-white transition-colors"
+            className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif font-semibold text-base sm:text-lg shadow-xl bg-white/80 backdrop-blur-md text-slate-900 hover:bg-white transition-colors text-center"
           >
             Viac informácií
           </a>
@@ -100,7 +100,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
         <div className="w-6 h-10 rounded-full border-2 border-white/90 bg-white/20 backdrop-blur-sm flex items-start justify-center p-2 shadow-2xl">
           <div className="w-1.5 h-1.5 bg-white rounded-full" />
         </div>
