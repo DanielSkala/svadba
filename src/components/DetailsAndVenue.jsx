@@ -36,7 +36,7 @@ const DetailsAndVenue = () => {
             Detaily svadby
           </h2>
           <div className="w-24 h-1 bg-sage mx-auto mb-6"></div>
-          <p className="font-sans text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="font-serif text-lg text-gray-600 max-w-2xl mx-auto">
             Všetko, čo potrebujete vedieť o našom veľkom dni
           </p>
         </div>
@@ -52,7 +52,7 @@ const DetailsAndVenue = () => {
                 </div>
               </div>
               <h3 className="font-serif text-2xl text-gray-800 mb-4 text-center font-bold">Kedy</h3>
-              <p className="font-sans text-lg text-gray-700 text-center mb-2 font-medium">
+              <p className="font-serif text-lg text-gray-700 text-center mb-2 font-medium">
                 Piatok
               </p>
               <p className="font-serif text-3xl text-sage text-center mb-4 font-bold">
@@ -60,7 +60,7 @@ const DetailsAndVenue = () => {
               </p>
               <div className="flex items-center justify-center gap-2 text-gray-600">
                 <Clock className="w-5 h-5 text-sage" strokeWidth={1.5} />
-                <p className="font-sans text-base">Začiatok o 15:00</p>
+                <p className="font-serif text-base">Začiatok o 15:00</p>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const DetailsAndVenue = () => {
               <p className="font-serif text-2xl text-gray-800 text-center mb-2 font-semibold">
                 Stodola Pohanské
               </p>
-              <p className="font-sans text-sm text-gray-600 mb-6 text-center">
+              <p className="font-serif text-sm text-gray-600 mb-6 text-center">
                 Myto pod Ďumbierom<br/>Slovensko
               </p>
               <div className="text-center">
@@ -85,7 +85,7 @@ const DetailsAndVenue = () => {
                   href="https://stodola.pohanske.sk"
                   target="_blank"
                   rel="noopener noreferrer"You
-                  className="inline-block px-6 py-2.5 bg-sage text-white rounded-full font-sans text-sm font-medium hover:bg-sage/90 transition-all duration-300 shadow-md hover:shadow-lg"
+                  className="inline-block px-6 py-2.5 bg-sage text-white rounded-full font-serif text-sm font-medium hover:bg-sage/90 transition-all duration-300 shadow-md hover:shadow-lg"
                 >
                   Navštíviť web
                 </a>
@@ -105,7 +105,7 @@ const DetailsAndVenue = () => {
               <p className="font-serif text-xl text-gray-700 text-center mb-4 font-medium">
                 Cocktail / Semi-formal
               </p>
-              <p className="font-sans text-sm text-gray-600 text-center leading-relaxed">
+              <p className="font-serif text-sm text-gray-600 text-center leading-relaxed">
                 Prídte ako len sa cítite najlepšie!
               </p>
             </div>
@@ -116,7 +116,7 @@ const DetailsAndVenue = () => {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="text-center mb-12">
             <h3 className="font-serif text-4xl text-gray-800 mb-3 font-bold">Miesto konania</h3>
-            <p className="font-sans text-gray-600">Stodola Pohanské - krásne miesto v srdci Slovenska</p>
+            <p className="font-serif text-gray-600">Stodola Pohanské - krásne miesto v srdci Slovenska</p>
           </div>
 
           {/* Images and Map Layout - Square Left, Rectangular Right (split) */}
@@ -148,7 +148,7 @@ const DetailsAndVenue = () => {
                 </button>
 
                 {/* Image Counter */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-sans">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm font-serif">
                   {currentImageIndex + 1} / {images.length}
                 </div>
               </div>
@@ -182,7 +182,7 @@ const DetailsAndVenue = () => {
                     title="Stodola Pohanské location"
                   ></iframe>
                 </div>
-                <p className="text-center font-sans text-xs text-gray-500">
+                <p className="text-center font-serif text-xs text-gray-500">
                   GPS: 48.8502°N, 19.6453°E
                 </p>
               </div>
@@ -194,7 +194,7 @@ const DetailsAndVenue = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Info Box */}
           <div className="bg-sage/5 border-2 border-sage/20 rounded-2xl p-8">
-            <p className="font-sans text-lg text-gray-700 leading-relaxed">
+            <p className="font-serif text-lg text-gray-700 leading-relaxed">
               Parkovanie je zabezpečené priamo pri stodole.
               <br className="hidden sm:block" />
               Tešíme sa na vás!
@@ -204,7 +204,7 @@ const DetailsAndVenue = () => {
           {/* Navigate Button */}
           <button
             onClick={handleDirections}
-            className="inline-flex items-center gap-3 px-10 py-4 bg-sage text-white rounded-full font-sans text-lg font-semibold hover:bg-sage/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
+            className="inline-flex items-center gap-3 px-10 py-4 bg-sage text-white rounded-full font-serif text-lg font-semibold hover:bg-sage/90 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105"
           >
             <Navigation className="w-6 h-6" strokeWidth={2} />
             Navigovať do stodoly

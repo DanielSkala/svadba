@@ -30,26 +30,10 @@ const Hero = () => {
     >
       {/* Wide + short glass banner (higher to reveal photo center) */}
       <div className="absolute left-1/2 -translate-x-1/2 top-[8vh] sm:top-[10vh] md:top-[12vh] z-10 w-[92%] max-w-[1120px]">
-        <div className="relative text-center rounded-2xl md:rounded-3xl bg-white/50 backdrop-blur-xl shadow-2xl
+        <div className="relative text-center rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-3xl shadow-2xl border border-white/10
                         px-6 sm:px-10 md:px-14 py-6 sm:py-8 md:py-10 space-y-4">
 
-          {/* Three roses decoration in top right corner */}
-          <img
-            src="/images/wedding_leaves/three_roses_t.png"
-            alt=""
-            className="absolute -top-20 -right-20 w-48 md:w-60 lg:w-72 opacity-90 pointer-events-none"
-            aria-hidden="true"
-          />
-
-          {/* Three roses decoration in bottom left corner */}
-          <img
-            src="/images/wedding_leaves/three_roses_t.png"
-            alt=""
-            className="absolute -bottom-20 -left-20 w-48 md:w-60 lg:w-72 opacity-90 pointer-events-none transform scale-x-[-1]"
-            aria-hidden="true"
-          />
-
-          <Heart className="w-6 h-6 mx-auto text-sage/90" strokeWidth={1.5} aria-hidden="true" />
+          <Heart className="w-8 h-8 mx-auto text-red-500" fill="currentColor" strokeWidth={1.5} aria-hidden="true" />
 
           {/* Only script here */}
           <h1 className="font-script text-slate-900 leading-none text-[clamp(2.75rem,100vw,6.5rem)]">
@@ -57,13 +41,18 @@ const Hero = () => {
           </h1>
 
             {/* Invite line */}
-          <p className="font-sans text-slate-800 text-sm sm:text-base leading-relaxed">
+          <p className="font-serif text-slate-900 text-lg sm:text-xl md:text-2xl leading-relaxed">
             Srdečne vás pozývame na obrad a oslavu nášho manželstva
           </p>
 
+          {/* Date */}
+          <p className="font-serif text-slate-900 text-xl sm:text-2xl md:text-3xl font-semibold">
+            Máj 30, 2026
+          </p>
+
           {/* Venue */}
-          <p className="font-sans text-slate-800 text-sm sm:text-base">
-            Máj 30, 2026 • Stodola Pohanské, Mýto pod Ďumbierom
+          <p className="font-serif text-slate-900 text-base sm:text-lg md:text-xl">
+            Stodola Pohanské, Mýto pod Ďumbierom
           </p>
 
 
@@ -88,7 +77,7 @@ const Hero = () => {
       </button>
 
       {/* Image counter indicator */}
-      <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1.5 rounded-full text-sm font-sans z-20">
+      <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1.5 rounded-full text-sm font-serif z-20">
         {currentImageIndex + 1} / {heroImages.length}
       </div>
 
@@ -97,13 +86,13 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-3">
           <a
             href="#rsvp"
-            className="px-8 py-3 rounded-full font-sans font-semibold text-base shadow-xl bg-sage text-white hover:scale-[1.02] transition-transform"
+            className="px-8 py-3 rounded-full font-serif font-semibold text-base shadow-xl bg-sage text-white hover:scale-[1.02] transition-transform"
           >
             Potvrdiť účasť
           </a>
           <a
             href="#details"
-            className="px-8 py-3 rounded-full font-sans font-semibold text-base shadow-xl bg-white/80 backdrop-blur-md text-slate-900 hover:bg-white transition-colors"
+            className="px-8 py-3 rounded-full font-serif font-semibold text-base shadow-xl bg-white/80 backdrop-blur-md text-slate-900 hover:bg-white transition-colors"
           >
             Viac informácií
           </a>

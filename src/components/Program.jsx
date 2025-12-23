@@ -41,7 +41,7 @@ const Program = () => {
   ];
 
   return (
-    <section id="program" className="relative py-24 px-4 bg-cream bg-opacity-30 overflow-hidden">
+    <section id="program" className="relative py-16 px-4 bg-cream bg-opacity-30 overflow-hidden">
       {/* Decorative images */}
       <img
         src="/images/wedding_leaves/rose_corner.png"
@@ -59,12 +59,12 @@ const Program = () => {
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section header */}
-        <div className="text-center mb-20">
-          <h2 className="font-serif text-5xl sm:text-6xl md:text-7xl text-gray-800 mb-4 font-bold">
+        <div className="text-center mb-12">
+          <h2 className="font-serif text-4xl sm:text-5xl md:text-6xl text-gray-800 mb-3 font-bold">
             Program dňa
           </h2>
-          <div className="w-24 h-1 bg-sage mx-auto mb-6"></div>
-          <p className="font-sans text-lg text-gray-600">
+          <div className="w-24 h-1 bg-sage mx-auto mb-4"></div>
+          <p className="font-serif text-base text-gray-600">
             Načasovanie najdôležitejších momentov nášho dňa
           </p>
         </div>
@@ -82,26 +82,26 @@ const Program = () => {
                 className="relative"
               >
                 {/* Desktop: Alternating layout */}
-                <div className={`hidden md:grid md:grid-cols-2 gap-8 items-center mb-12 ${
+                <div className={`hidden md:grid md:grid-cols-2 gap-8 items-center mb-8 ${
                   index % 2 === 0 ? '' : ''
                 }`}>
                   {/* Left side */}
                   <div className={`${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12 order-2'}`}>
                     <div className={`inline-block ${index % 2 === 0 ? '' : 'text-left'}`}>
-                      <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-sage flex items-start gap-6">
+                      <div className="bg-white p-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-l-4 border-sage flex items-start gap-4">
                         {/* Image on left side of card when index is even */}
                         {index % 2 === 0 && (
                           <img
                             src={item.image}
                             alt={item.title}
-                            className="w-40 h-auto object-contain rounded-lg flex-shrink-0"
+                            className="w-32 h-auto object-contain rounded-lg flex-shrink-0"
                           />
                         )}
                         <div className="flex-grow self-center">
-                          <h3 className="font-serif text-2xl text-gray-800 mb-3 font-bold">
+                          <h3 className="font-serif text-xl text-gray-800 mb-2 font-bold">
                             {item.title}
                           </h3>
-                          <p className="font-sans text-gray-600 leading-relaxed">
+                          <p className="font-serif text-gray-600 text-sm leading-relaxed">
                             {item.description}
                           </p>
                         </div>
@@ -110,7 +110,7 @@ const Program = () => {
                           <img
                             src={item.image}
                             alt={item.title}
-                            className="w-40 h-auto object-contain rounded-lg flex-shrink-0"
+                            className="w-32 h-auto object-contain rounded-lg flex-shrink-0"
                           />
                         )}
                       </div>
@@ -119,8 +119,8 @@ const Program = () => {
 
                   {/* Time badge in center */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="flex items-center justify-center w-20 h-20 rounded-full bg-sage shadow-xl border-4 border-white">
-                      <span className="font-serif text-xl text-white font-bold">
+                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-sage shadow-xl border-4 border-white">
+                      <span className="font-serif text-lg text-white font-bold">
                         {item.time}
                       </span>
                     </div>
@@ -131,10 +131,10 @@ const Program = () => {
                 </div>
 
                 {/* Mobile: Simple stacked layout */}
-                <div className="md:hidden flex gap-4 mb-8">
+                <div className="md:hidden flex gap-3 mb-6">
                   <div className="flex flex-col items-center">
-                    <div className="flex items-center justify-center w-16 h-16 rounded-full bg-sage shadow-lg flex-shrink-0">
-                      <span className="font-serif text-lg text-white font-bold">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-full bg-sage shadow-lg flex-shrink-0">
+                      <span className="font-serif text-base text-white font-bold">
                         {item.time}
                       </span>
                     </div>
@@ -142,18 +142,18 @@ const Program = () => {
                       <div className="w-1 flex-grow bg-sage bg-opacity-20 mt-2"></div>
                     )}
                   </div>
-                  <div className="flex-grow pb-6">
-                    <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-sage flex items-start gap-4">
+                  <div className="flex-grow pb-4">
+                    <div className="bg-white p-4 rounded-xl shadow-lg border-l-4 border-sage flex items-start gap-3">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-28 h-auto object-contain rounded-lg flex-shrink-0"
+                        className="w-24 h-auto object-contain rounded-lg flex-shrink-0"
                       />
                       <div className="flex-grow self-center">
-                        <h3 className="font-serif text-xl text-gray-800 mb-2 font-bold">
+                        <h3 className="font-serif text-lg text-gray-800 mb-1 font-bold">
                           {item.title}
                         </h3>
-                        <p className="font-sans text-gray-600 text-sm leading-relaxed">
+                        <p className="font-serif text-gray-600 text-sm leading-relaxed">
                           {item.description}
                         </p>
                       </div>
@@ -166,8 +166,8 @@ const Program = () => {
         </div>
 
         {/* Note */}
-        <div className="mt-16 text-center">
-          <p className="font-sans text-sm text-gray-600 italic">
+        <div className="mt-8 text-center">
+          <p className="font-serif text-sm text-gray-600 italic">
             *Časy sú orientačné a môžu sa mierne meniť
           </p>
         </div>

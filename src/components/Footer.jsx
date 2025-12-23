@@ -39,7 +39,7 @@ const Footer = () => {
           <p className="font-serif text-xl text-gray-700 mb-2">
             Veronika & Daniel
           </p>
-          <p className="font-sans text-sm text-gray-600">
+          <p className="font-serif text-sm text-gray-600">
             30. mája 2025
           </p>
         </div>
@@ -48,31 +48,31 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
           <a
             href="#details"
-            className="font-sans text-gray-600 hover:text-sage transition-colors"
+            className="font-serif text-gray-600 hover:text-sage transition-colors"
           >
             Detaily
           </a>
           <a
             href="#program"
-            className="font-sans text-gray-600 hover:text-sage transition-colors"
+            className="font-serif text-gray-600 hover:text-sage transition-colors"
           >
             Program
           </a>
           <a
             href="#travel"
-            className="font-sans text-gray-600 hover:text-sage transition-colors"
+            className="font-serif text-gray-600 hover:text-sage transition-colors"
           >
             Doprava
           </a>
           <a
             href="#gifts"
-            className="font-sans text-gray-600 hover:text-sage transition-colors"
+            className="font-serif text-gray-600 hover:text-sage transition-colors"
           >
             Dary
           </a>
           <a
             href="#rsvp"
-            className="font-sans text-gray-600 hover:text-sage transition-colors"
+            className="font-serif text-gray-600 hover:text-sage transition-colors"
           >
             RSVP
           </a>
@@ -90,7 +90,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center">
-          <p className="font-sans text-xs text-gray-500">
+          <p className="font-serif text-xs text-gray-500">
             © 2025 Veronika & Daniel. Vytvorené s láskou.
           </p>
         </div>

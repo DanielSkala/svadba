@@ -80,7 +80,7 @@ const FAQ = () => {
                 }`}
               >
                 <div className="px-6 pb-4">
-                  <p className="font-sans text-gray-700 leading-relaxed">
+                  <p className="font-serif text-gray-700 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>
@@ -91,12 +91,12 @@ const FAQ = () => {
 
         {/* Additional contact */}
         <div className="mt-12 text-center">
-          <p className="font-sans text-gray-700 mb-4">
+          <p className="font-serif text-gray-700 mb-4">
             Máte ďalšie otázky?
           </p>
           <a
             href="#rsvp"
-            className="inline-block px-6 py-2 border border-sage text-sage rounded-full font-sans text-sm hover:bg-sage hover:text-white transition-all duration-300"
+            className="inline-block px-6 py-2 border border-sage text-sage rounded-full font-serif text-sm hover:bg-sage hover:text-white transition-all duration-300"
           >
             Kontaktujte nás
           </a>
