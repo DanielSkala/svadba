@@ -19,12 +19,9 @@ const Hero = () => {
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden"
+      className="relative min-h-screen overflow-hidden bg-cover bg-center"
       style={{
         backgroundImage: `url(${heroImages[currentImageIndex]})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
       }}
       aria-label="Veronika a Daniel – svadba"
     >
