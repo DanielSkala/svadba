@@ -19,36 +19,57 @@ const Hero = () => {
 
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-cover bg-center"
-      style={{
-        backgroundImage: `url(${heroImages[currentImageIndex]})`,
-      }}
+      className="relative min-h-screen overflow-hidden"
       aria-label="Veronika a Daniel – svadba"
     >
-      {/* Wide + short glass banner (higher to reveal photo center) */}
-      <div className="absolute left-1/2 -translate-x-1/2 top-[12vh] sm:top-[10vh] md:top-[12vh] z-10 w-[92%] max-w-[1120px]">
-        <div className="relative text-center rounded-2xl md:rounded-3xl bg-white/5 backdrop-blur-3xl shadow-2xl border border-white/10
-                        px-4 sm:px-10 md:px-14 py-5 sm:py-8 md:py-10 space-y-2 sm:space-y-4">
+      {/* Fixed background image with darkening overlay */}
+      <div className="fixed inset-0 w-full h-full">
+        <img
+          src={heroImages[currentImageIndex]}
+          alt="Wedding background"
+          className="w-full h-full object-cover transition-opacity duration-500"
+        />
+        {/* Dark overlay with vignette effect */}
+        <div className="absolute inset-0 bg-black/15"></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.2) 100%)'
+          }}
+        ></div>
+        {/* Light texture overlay */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")`,
+            mixBlendMode: 'overlay'
+          }}
+        ></div>
+      </div>
 
-          <Heart className="w-7 h-7 sm:w-8 sm:h-8 mx-auto text-red-500" fill="currentColor" strokeWidth={1.5} aria-hidden="true" />
+      {/* Main content - no glass background */}
+      <div className="absolute left-1/2 -translate-x-1/2 top-[12vh] sm:top-[10vh] md:top-[12vh] z-10 w-[92%] max-w-[1120px]">
+        <div className="relative text-center px-4 sm:px-10 md:px-14 py-5 sm:py-8 md:py-10 space-y-2 sm:space-y-4">
+
+          <Heart className="w-7 h-7 sm:w-8 sm:h-8 mx-auto text-red-500 drop-shadow-lg" fill="currentColor" strokeWidth={1.5} aria-hidden="true" style={{ filter: 'drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3))' }} />
 
           {/* Only script here */}
-          <h1 className="font-script text-slate-900 leading-none text-[clamp(2.5rem,12vw,6.5rem)]">
+          <h1 className="font-script text-white leading-none text-[clamp(2.5rem,12vw,6.5rem)]" style={{ textShadow: '0 6px 20px rgba(0, 0, 0, 0.5), 0 3px 8px rgba(0, 0, 0, 0.3)' }}>
             Veronika <span className="align-[-0.08em]">&</span> Daniel
           </h1>
 
             {/* Invite line */}
-          <p className="font-serif text-slate-900 text-base sm:text-xl md:text-2xl leading-relaxed">
+          <p className="font-serif text-white text-base sm:text-xl md:text-2xl leading-relaxed" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
             Srdečne vás pozývame na obrad a oslavu nášho manželstva
           </p>
 
           {/* Date */}
-          <p className="font-serif text-slate-900 text-lg sm:text-2xl md:text-3xl font-semibold">
+          <p className="font-serif text-white text-lg sm:text-2xl md:text-3xl font-semibold" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
             Máj 30, 2026
           </p>
 
           {/* Venue */}
-          <p className="font-serif text-slate-900 text-sm sm:text-lg md:text-xl">
+          <p className="font-serif text-white text-sm sm:text-lg md:text-xl" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
             Stodola Pohanské, Mýto pod Ďumbierom
           </p>
 
