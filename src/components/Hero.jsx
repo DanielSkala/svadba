@@ -22,8 +22,8 @@ const Hero = () => {
       className="relative min-h-screen overflow-hidden"
       aria-label="Veronika a Daniel – svadba"
     >
-      {/* Fixed background image with darkening overlay */}
-      <div className="fixed inset-0 w-full h-full">
+      {/* Absolute background image with darkening overlay - only in Hero section */}
+      <div className="absolute inset-0 w-full h-full">
         <img
           src={heroImages[currentImageIndex]}
           alt="Wedding background"
@@ -46,6 +46,9 @@ const Hero = () => {
           }}
         ></div>
       </div>
+
+      {/* Content wrapper with relative positioning */}
+      <div className="relative min-h-screen z-10">
 
       {/* Main content - no glass background */}
       <div className="absolute left-1/2 -translate-x-1/2 top-[12vh] sm:top-[10vh] md:top-[12vh] z-10 w-[92%] max-w-[1120px]">
@@ -122,6 +125,8 @@ const Hero = () => {
         <div className="w-6 h-10 rounded-full border-2 border-white/90 bg-white/20 backdrop-blur-sm flex items-start justify-center p-2 shadow-2xl">
           <div className="w-1.5 h-1.5 bg-white rounded-full" />
         </div>
+      </div>
+
       </div>
     </section>
   );
