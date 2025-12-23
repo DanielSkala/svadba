@@ -6,28 +6,28 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'Môžem prísť s partnerom/partnerkou?',
-      answer: 'Áno, s radosťou! Prosím, uveďte počet hostí pri potvrdení účasti v RSVP formulári.'
+      question: 'Môžem vám darovať kvety?',
+      answer: 'Prosíme, radšej nám neprinášajte kvety, u nás nevydržia dlho. Viac nás poteší finančný dar na našu spoločnú budúcnosť.'
     },
     {
-      question: 'Je možné prísť s deťmi?',
-      answer: 'Samozrejme! Deti sú vítané. Budeme mať pre ne pripravené zábavné aktivity. Prosím, uveďte počet detí v RSVP formulári.'
+      question: 'Je obrad vonku?',
+      answer: 'Áno, obrad sa bude konať vonku na terase stodoly. V prípade nepriaznivého počasia máme pripravený záložný plán v interiéri.'
     },
     {
-      question: 'Aký je dress code?',
-      answer: 'Dress code je cocktail/semi-formal. Prosíme, vyvarujte sa bielej farby, ktorá je vyhradená pre nevestu. Pánov prosíme o oblek alebo košeľu s nohavicami, dámy o koktejlové šaty alebo elegantný outfit.'
-    },
-    {
-      question: 'Bude zabezpečená fotograf?',
+      question: 'Bude zabezpečený fotograf?',
       answer: 'Áno, budeme mať profesionálneho fotografa. Fotografie vám potom pošleme. Samozrejme, môžete si robiť vlastné fotky a prosíme o zdieľanie!'
     },
     {
       question: 'Do kedy mám potvrdiť účasť?',
-      answer: 'Prosíme o potvrdenie účasti do 30. apríla 2025, aby sme mohli dokončiť organizačné detaily.'
+      answer: 'Prosíme o potvrdenie účasti najneskôr do 30. marca 2025, aby sme mohli dokončiť organizačné detaily.'
     },
     {
       question: 'Kde môžem prenocovať?',
-      answer: 'V sekcii "Doprava · Ubytování" nájdete odporúčané hotely a penzióny v okolí. Je potrebné si rezervovať vopred.'
+      answer: 'V sekcii "Doprava · Ubytovanie" nájdete odporúčané hotely a penzióny v okolí. Je potrebné si rezervovať vopred.'
+    },
+    {
+      question: 'Dá sa aj stanovať priamo na mieste?',
+      answer: 'Áno, dá sa stanovať aj na terase stodoly alebo priamo na lúke pod hviezdami. Prosíme, uveďte to v RSVP formulári, aby sme mohli zabezpečiť dostatok priestoru.'
     }
   ];
 
