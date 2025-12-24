@@ -54,25 +54,25 @@ const Hero = () => {
       <div className="absolute left-1/2 -translate-x-1/2 top-[12vh] sm:top-[10vh] md:top-[12vh] z-10 w-[92%] max-w-[1120px]">
         <div className="relative text-center px-4 sm:px-10 md:px-14 py-5 sm:py-8 md:py-10 space-y-2 sm:space-y-4">
 
-          <Heart className="w-7 h-7 sm:w-8 sm:h-8 mx-auto text-red-500 drop-shadow-lg" fill="currentColor" strokeWidth={1.5} aria-hidden="true" style={{ filter: 'drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3))' }} />
+          <Heart className="w-7 h-7 sm:w-8 sm:h-8 mx-auto text-red-500" fill="currentColor" strokeWidth={1.5} aria-hidden="true" />
 
           {/* Only script here */}
-          <h1 className="font-script text-white leading-none text-[clamp(2.5rem,12vw,6.5rem)]" style={{ textShadow: '0 6px 20px rgba(0, 0, 0, 0.5), 0 3px 8px rgba(0, 0, 0, 0.3)' }}>
+          <h1 className="font-script text-white leading-none text-[clamp(3.25rem,15.6vw,8.45rem)]" style={{ textShadow: '0 6px 20px rgba(0, 0, 0, 0.5), 0 3px 8px rgba(0, 0, 0, 0.3)' }}>
             Veronika <span className="align-[-0.08em]">&</span> Daniel
           </h1>
 
             {/* Invite line */}
-          <p className="font-serif text-white text-base sm:text-xl md:text-2xl leading-relaxed" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
+          <p className="font-serif text-white text-[1.2rem] sm:text-[1.5rem] md:text-[1.8rem] leading-relaxed" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
             Srdečne vás pozývame na obrad a oslavu nášho manželstva
           </p>
 
           {/* Date */}
-          <p className="font-serif text-white text-lg sm:text-2xl md:text-3xl font-semibold" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
+          <p className="font-serif text-white text-[1.35rem] sm:text-[1.8rem] md:text-[2.25rem] font-semibold" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
             Máj 30, 2026
           </p>
 
           {/* Venue */}
-          <p className="font-serif text-white text-sm sm:text-lg md:text-xl" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
+          <p className="font-serif text-white text-[1.05rem] sm:text-[1.35rem] md:text-[1.5rem]" style={{ textShadow: '0 4px 16px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3)' }}>
             Stodola Pohanské, Mýto pod Ďumbierom
           </p>
 
