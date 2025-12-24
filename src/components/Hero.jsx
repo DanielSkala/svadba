@@ -6,7 +6,8 @@ const Hero = () => {
   const heroImages = [
     '/images/hero_main.jpeg',
     '/images/hero_main_2.jpeg',
-    '/images/hero_main_3.jpeg'
+    '/images/hero_main_3.jpeg',
+    '/images/svadba_videjko.mp4'
   ];
 
   const nextImage = () => {
@@ -22,13 +23,26 @@ const Hero = () => {
       className="relative min-h-screen overflow-hidden"
       aria-label="Veronika a Daniel – svadba"
     >
-      {/* Absolute background image with darkening overlay - only in Hero section */}
+      {/* Absolute background image/video with darkening overlay - only in Hero section */}
       <div className="absolute inset-0 w-full h-full">
-        <img
-          src={heroImages[currentImageIndex]}
-          alt="Wedding background"
-          className="w-full h-full object-cover transition-opacity duration-500"
-        />
+        {heroImages[currentImageIndex].endsWith('.mp4') ? (
+          <video
+            key={currentImageIndex}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover transition-opacity duration-500"
+          >
+            <source src={heroImages[currentImageIndex]} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={heroImages[currentImageIndex]}
+            alt="Wedding background"
+            className="w-full h-full object-cover transition-opacity duration-500"
+          />
+        )}
         {/* Dark overlay with vignette effect */}
         <div className="absolute inset-0 bg-black/15"></div>
         <div
@@ -37,9 +51,9 @@ const Hero = () => {
             background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.2) 100%)'
           }}
         ></div>
-        {/* Light texture overlay */}
+        {/* Light texture overlay - stronger for video */}
         <div
-          className="absolute inset-0 opacity-20"
+          className={`absolute inset-0 transition-opacity duration-500 ${currentImageIndex === 3 ? 'opacity-40' : 'opacity-20'}`}
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E")`,
             mixBlendMode: 'overlay'
