@@ -4,7 +4,7 @@ import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const heroImages = [
-    '/images/svadba_videjko_v2.mp4',
+    '/images/svadba_videjko_v3.mp4',
     '/images/hero_main.jpeg',
     '/images/hero_main_2.jpeg',
     '/images/hero_main_3.jpeg'
