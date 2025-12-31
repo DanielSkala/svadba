@@ -7,7 +7,11 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'Môžem vám darovať kvety?',
-      answer: 'Viac nás poteší finančný dar na našu spoločnú budúcnosť.'
+      answer: 'Viac nás poteší finančný dar na našu spoločnú budúcnosť alebo iný dar. Pokiaľ nás chcete predsalen obdarovať kvetmi, viac nám urobia radosť rastlinky v kvetináči, aby nás čo najdlhšie tešili.'
+    },
+    {
+      question: 'Môžeme vám darovať alkohol?',
+      answer: 'Viac nás poteší finančný dar na našu spoločnú budúcnosť alebo iný dar, keďže alkohol veľmi nepijeme.'
     },
     {
       question: 'Je obrad vonku?',
@@ -15,7 +19,7 @@ const FAQ = () => {
     },
     {
       question: 'Bude zabezpečený fotograf?',
-      answer: 'Áno, budeme mať profesionálneho fotografa, ktorý vám im po svadbe pošle. Samozrejme, môžete si robiť vlastné fotky a prosíme o zdieľanie!'
+      answer: 'Áno, budeme mať profesionálneho fotografa, ktorý vám samozrejme fotky po svadbe pošle. Link na prípadné zdielanie vašich fotiek nájdete tu.'
     },
     {
       question: 'Do kedy mám potvrdiť účasť?',

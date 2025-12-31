@@ -10,20 +10,20 @@ const Program = () => {
     },
     {
       time: '16:15',
-      title: 'Novomanželské fotenie',
-      description: 'Fotenie v krásnom okolí stodoly',
+      title: 'Fotenie a gratulácie',
+      description: 'Fotenie v krásnom prostredí stodoly.',
       image: '/images/program_images/fotenie.png'
     },
     {
       time: '18:00',
       title: 'Večera',
-      description: 'Slávnostná štvorchodová večera a prípitky',
+      description: 'Slávnostná večera a príhovory.',
       image: '/images/program_images/vecera.png'
     },
     {
       time: '19:00',
       title: 'Program',
-      description: 'Pripravujeme pre vás prekvapenie ;)',
+      description: 'Príďte a uvidíte ;)        ',
       image: '/images/program_images/program.png'
     },
     {
@@ -35,7 +35,7 @@ const Program = () => {
       {
       time: '04:00',
       title: 'Koniec',
-      description: 'Lúčime sa s vami, papik',
+      description: 'Lúčime sa s vami, papik!',
       image: '/images/program_images/koniec.png'
     }
   ];
