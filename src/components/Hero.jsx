@@ -6,10 +6,10 @@ const Hero = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const heroImages = [
-    '/images/svadba_videjko_v3.mp4',
-    '/images/hero_main.jpeg',
-    '/images/hero_main_2.jpeg',
-    '/images/hero_main_3.jpeg'
+    '/images/svadba_videjko_27MB.mp4',
+    '/images/hero_main.jpg',
+    '/images/hero_main_2.jpg',
+    '/images/hero_main_3.jpg'
   ];
 
   // Preload all images when component mounts
@@ -63,6 +63,7 @@ const Hero = () => {
             muted
             playsInline
             preload="auto"
+            poster="/images/hero_main.jpeg"
             className="w-full h-full object-cover transition-opacity duration-500"
           >
             <source src={heroImages[currentImageIndex]} type="video/mp4" />
