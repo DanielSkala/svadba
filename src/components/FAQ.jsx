@@ -44,12 +44,12 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="relative py-20 px-4 bg-cream bg-opacity-30 overflow-hidden">
-      {/* Background pattern with sprinkled leaves */}
+    <section id="faq" className="relative py-20 px-4 bg-cream-glow overflow-hidden">
+      {/* Elegant rose accent - unique to this section */}
       <img
-        src="/images/wedding_leaves/TS-Wedding-Leaves.png"
+        src="/images/wedding_leaves/three_roses_t.png"
         alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
+        className="absolute bottom-16 -right-16 w-80 md:w-96 lg:w-[28rem] opacity-20 pointer-events-none rotate-12"
         aria-hidden="true"
       />
 

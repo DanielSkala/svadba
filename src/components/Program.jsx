@@ -41,19 +41,12 @@ const Program = () => {
   ];
 
   return (
-    <section id="program" className="relative py-16 px-4 bg-cream bg-opacity-30 overflow-hidden">
-      {/* Decorative images */}
+    <section id="program" className="relative py-16 px-4 bg-cream-gradient overflow-hidden">
+      {/* Centered circular leaves watermark - unique to this section */}
       <img
-        src="/images/wedding_leaves/rose_corner.png"
+        src="/images/wedding_leaves/leaves_circular.png"
         alt=""
-        className="absolute bottom-0 right-0 w-80 md:w-96 lg:w-[32rem] opacity-60 pointer-events-none transform scale-y-[-1]"
-        aria-hidden="true"
-      />
-
-      <img
-        src="/images/wedding_leaves/leaf_in_corner.png"
-        alt=""
-        className="absolute bottom-0 left-0 w-64 md:w-80 lg:w-96 opacity-50 pointer-events-none transform scale-y-[-1]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] lg:w-[1000px] opacity-[0.07] pointer-events-none"
         aria-hidden="true"
       />
 

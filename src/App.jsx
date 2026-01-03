@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
+import SectionDivider from './components/SectionDivider';
 import DetailsAndVenue from './components/DetailsAndVenue';
 import Program from './components/Program';
 import Accomodation from './components/Accomodation.jsx';
@@ -17,6 +18,8 @@ function App() {
     <div className="min-h-screen">
       <Navigation />
       <Hero />
+      {/* Elegant transition from Hero to content */}
+      <SectionDivider color="#FFFFFF" />
       <AnimatedSection>
         <DetailsAndVenue />
       </AnimatedSection>
@@ -35,6 +38,8 @@ function App() {
       <AnimatedSection>
         <FAQ />
       </AnimatedSection>
+      {/* Elegant transition to Footer */}
+      <SectionDivider flip color="#F5F1E8" />
       <Footer />
     </div>
   );

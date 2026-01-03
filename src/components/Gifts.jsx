@@ -14,7 +14,7 @@ const Gifts = () => {
   };
 
   return (
-    <section id="gifts" className="relative py-20 px-4 bg-cream bg-opacity-30 overflow-hidden">
+    <section id="gifts" className="relative py-20 px-4 bg-cream-center-glow overflow-hidden">
       {/* Background pattern with sprinkled leaves */}
       <img
         src="/images/wedding_leaves/TS-Wedding-Leaves.png"
@@ -43,9 +43,9 @@ const Gifts = () => {
         {/* Payment options */}
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {/* IBAN */}
-          <div className="bg-cream bg-opacity-50 p-8 rounded-lg text-center">
+          <div className="text-center">
             <h3 className="font-serif text-2xl text-gray-800 mb-4 font-bold">Bankový prevod</h3>
-            <div className="bg-white p-4 rounded border border-sage border-opacity-20 mb-4">
+            <div className="bg-white p-4 rounded-xl shadow-md border border-sage border-opacity-20 mb-4">
               <p className="font-mono text-sm text-gray-700 break-all">{iban}</p>
             </div>
             <button
@@ -67,9 +67,9 @@ const Gifts = () => {
           </div>
 
           {/* QR Code */}
-          <div className="bg-cream bg-opacity-50 p-8 rounded-lg text-center">
+          <div className="text-center">
             <h3 className="font-serif text-2xl text-gray-800 mb-4 font-bold">QR platba</h3>
-            <div className="bg-white p-6 rounded border border-sage border-opacity-20 mb-4 flex items-center justify-center">
+            <div className="bg-white p-6 rounded-xl shadow-md border border-sage border-opacity-20 mb-4 flex items-center justify-center">
               <img
                 src="/images/qr_pay.jpeg"
                 alt="QR kód pre platbu"
