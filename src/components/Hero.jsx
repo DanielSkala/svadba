@@ -1,14 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
   const heroImages = [
     '/images/svadba_videjko_v3.mp4',
     '/images/hero_main.jpeg',
     '/images/hero_main_2.jpeg',
     '/images/hero_main_3.jpeg'
   ];
+
+  // Preload all images when component mounts
+  useEffect(() => {
+    const imageUrls = heroImages.filter(src => !src.endsWith('.mp4'));
+    let loadedCount = 0;
+
+    imageUrls.forEach(src => {
+      const img = new Image();
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === imageUrls.length) {
+          setImagesLoaded(true);
+        }
+      };
+      img.onerror = () => {
+        loadedCount++;
+        if (loadedCount === imageUrls.length) {
+          setImagesLoaded(true);
+        }
+      };
+      img.src = src;
+    });
+
+    // Also preload video
+    const video = document.createElement('video');
+    video.preload = 'auto';
+    video.src = heroImages[0];
+  }, []);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
@@ -32,6 +62,7 @@ const Hero = () => {
             loop
             muted
             playsInline
+            preload="auto"
             className="w-full h-full object-cover transition-opacity duration-500"
           >
             <source src={heroImages[currentImageIndex]} type="video/mp4" />
@@ -40,6 +71,8 @@ const Hero = () => {
           <img
             src={heroImages[currentImageIndex]}
             alt="Wedding background"
+            loading="eager"
+            fetchPriority="high"
             className="w-full h-full object-cover transition-opacity duration-500"
           />
         )}
@@ -121,13 +154,13 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
           <a
             href="#rsvp"
-            className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif font-semibold text-base sm:text-lg shadow-xl bg-sage text-white hover:scale-[1.02] transition-transform text-center"
+            className="sm:flex-1 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif font-semibold text-base sm:text-lg shadow-xl bg-sage text-white hover:scale-[1.02] transition-transform text-center"
           >
             Potvrdiť účasť
           </a>
           <a
             href="#details"
-            className="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif font-semibold text-base sm:text-lg shadow-xl bg-white/80 backdrop-blur-md text-slate-900 hover:bg-white transition-colors text-center"
+            className="sm:flex-1 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-serif font-semibold text-base sm:text-lg shadow-xl bg-white/80 backdrop-blur-md text-slate-900 hover:bg-white transition-colors text-center"
           >
             Viac informácií
           </a>

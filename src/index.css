@@ -10,6 +10,11 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Offset for sticky navigation when scrolling to sections */
+  section[id] {
+    scroll-margin-top: 80px;
+  }
 }
 
 @layer utilities {
