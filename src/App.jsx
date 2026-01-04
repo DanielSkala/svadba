@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import SectionDivider from './components/SectionDivider';
-import DetailsAndVenue from './components/DetailsAndVenue';
-import Program from './components/Program';
-import Accomodation from './components/Accomodation.jsx';
-import Gifts from './components/Gifts';
-import RSVP from './components/RSVP';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
 import AnimatedSection from './components/AnimatedSection';
 import 'leaflet/dist/leaflet.css';
+
+// Lazy load below-fold components to prioritize video loading
+const DetailsAndVenue = lazy(() => import('./components/DetailsAndVenue'));
+const Program = lazy(() => import('./components/Program'));
+const Accomodation = lazy(() => import('./components/Accomodation.jsx'));
+const Gifts = lazy(() => import('./components/Gifts'));
+const RSVP = lazy(() => import('./components/RSVP'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Footer = lazy(() => import('./components/Footer'));
 
 
 function App() {
@@ -20,27 +22,29 @@ function App() {
       <Hero />
       {/* Elegant transition from Hero to content */}
       <SectionDivider color="#FFFFFF" />
-      <AnimatedSection>
-        <DetailsAndVenue />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Program />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Accomodation />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Gifts />
-      </AnimatedSection>
-      <AnimatedSection>
-        <RSVP />
-      </AnimatedSection>
-      <AnimatedSection>
-        <FAQ />
-      </AnimatedSection>
-      {/* Elegant transition to Footer */}
-      <SectionDivider flip color="#F5F1E8" />
-      <Footer />
+      <Suspense fallback={<div className="min-h-screen" />}>
+        <AnimatedSection>
+          <DetailsAndVenue />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Program />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Accomodation />
+        </AnimatedSection>
+        <AnimatedSection>
+          <Gifts />
+        </AnimatedSection>
+        <AnimatedSection>
+          <RSVP />
+        </AnimatedSection>
+        <AnimatedSection>
+          <FAQ />
+        </AnimatedSection>
+        {/* Elegant transition to Footer */}
+        <SectionDivider flip color="#F5F1E8" />
+        <Footer />
+      </Suspense>
     </div>
   );
 }

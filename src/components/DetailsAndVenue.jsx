@@ -8,10 +8,10 @@ const DetailsAndVenue = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
     '/images/stodola_pohanske.jpg',
-    '/images/IMG_0035.png',
-    '/images/IMG_0062.png',
-    '/images/IMG_0072.png',
-    '/images/IMG_7636.png'
+    '/images/IMG_0035.jpg',
+    '/images/IMG_0062.jpg',
+    '/images/IMG_0072.jpg',
+    '/images/IMG_7636.jpg'
   ];
 
   const nextImage = () => {

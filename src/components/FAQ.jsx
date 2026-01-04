@@ -7,11 +7,11 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'Môžem vám darovať kvety?',
-      answer: 'Viac nás poteší finančný dar na našu spoločnú budúcnosť alebo iný dar. Pokiaľ nás chcete predsalen obdarovať kvetmi, viac nám urobia radosť rastlinky v kvetináči, aby nás čo najdlhšie tešili.'
+      answer: 'Najviac nás poteší finančný dar na našu spoločnú budúcnosť. Pokiaľ nás chcete predsalen obdarovať kvetmi, viac nám urobia radosť rastlinky v kvetináči. Ale radšej nie ;)'
     },
     {
       question: 'Môžeme vám darovať alkohol?',
-      answer: 'Viac nás poteší finančný dar na našu spoločnú budúcnosť alebo iný dar, keďže alkohol veľmi nepijeme.'
+      answer: 'Keďže alkohol veľmi nepijeme, viac nás poteší finančný dar alebo niečo zo zoznamu.'
     },
     {
       question: 'Je obrad vonku?',
@@ -19,7 +19,20 @@ const FAQ = () => {
     },
     {
       question: 'Bude zabezpečený fotograf?',
-      answer: 'Áno, budeme mať profesionálneho fotografa, ktorý vám samozrejme fotky po svadbe pošle. Link na prípadné zdielanie vašich fotiek nájdete tu.'
+      answer: (
+        <>
+          Áno, budeme mať profesionálneho fotografa, ktorý vám samozrejme fotky po svadbe pošle. Link na prípadné zdielanie vašich fotiek nájdete{' '}
+          <a
+            href="https://drive.google.com/drive/folders/1s6XRC3vFKIBc37ZThUC3O6Qj7Aqm7eYz?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sage underline hover:text-sage/80 transition-colors"
+          >
+            tu
+          </a>
+          .
+        </>
+      )
     },
     {
       question: 'Do kedy mám potvrdiť účasť?',
@@ -27,11 +40,11 @@ const FAQ = () => {
     },
     {
       question: 'Kde môžem prenocovať?',
-      answer: 'V sekcii "Doprava · Ubytovanie" nájdete odporúčané hotely a penzióny v okolí. Je potrebné si rezervovať vopred.'
+      answer: 'V sekcii "Doprava · Ubytovanie" nájdete odporúčané hotely a penzióny v okolí. Je potrebné si rezervovať vopred. Odporúčame aj Airbnb alebo Booking.'
     },
     {
       question: 'Dá sa aj stanovať priamo na mieste?',
-      answer: 'Áno, dá sa stanovať aj na terase stodoly alebo priamo na lúke pod hviezdami. Prosíme, uveďte to v RSVP formulári, aby sme mohli zabezpečiť dostatok priestoru.'
+      answer: 'Áno, dá sa stanovať aj na terase stodoly alebo priamo na lúke pod hviezdami. Prosíme, uveďte to v RSVP formulári, aby sme mohli zabezpečiť dostatok priestoru (počet ľudí, stanov a pod.)'
     },
     {
       question: 'Ako sa v noci dostanem späť na ubytovanie?',

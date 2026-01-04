@@ -36,7 +36,7 @@ const Gifts = () => {
         <div className="text-center mb-12">
           <p className="font-serif text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto mb-8">
             Vaša prítomnosť je pre nás tým najkrajším darom. Ak nás však chcete obdarovať,
-            budeme vďační za príspevok na našu spoločnú budúcnosť.
+            budeme vďační za príspevok na našu spoločnú budúcnosť alebo dar zo zoznamu nižšie.
           </p>
         </div>
 
@@ -48,22 +48,38 @@ const Gifts = () => {
             <div className="bg-white p-4 rounded-xl shadow-md border border-sage border-opacity-20 mb-4">
               <p className="font-mono text-sm text-gray-700 break-all">{iban}</p>
             </div>
-            <button
-              onClick={handleCopyIBAN}
-              className="inline-flex items-center gap-2 px-6 py-2 bg-sage text-white rounded-full font-serif text-base hover:bg-opacity-90 transition-all duration-300"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4" strokeWidth={2} />
-                  Skopírované!
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4" strokeWidth={2} />
-                  Kopírovať IBAN
-                </>
-              )}
-            </button>
+            <div className="flex flex-col items-center gap-3 w-48 mx-auto">
+              <button
+                onClick={handleCopyIBAN}
+                className="w-full flex items-center justify-center gap-2 px-6 py-2 bg-sage text-white rounded-full font-serif text-base hover:bg-opacity-90 transition-all duration-300"
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-4 h-4" strokeWidth={2} />
+                    Skopírované!
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4" strokeWidth={2} />
+                    Kopírovať IBAN
+                  </>
+                )}
+              </button>
+              <a
+                href="https://docs.google.com/spreadsheets/d/1hXjaInDQYOUdHXQ_Lkooc2AMHSJ-0gB5mvxlV5C--mg/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-6 py-2 bg-sage text-white rounded-full font-serif text-base hover:bg-opacity-90 transition-all duration-300"
+              >
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="3" y1="9" x2="21" y2="9"/>
+                  <line x1="3" y1="15" x2="21" y2="15"/>
+                  <line x1="9" y1="3" x2="9" y2="21"/>
+                </svg>
+                Zoznam darov
+              </a>
+            </div>
           </div>
 
           {/* QR Code */}
