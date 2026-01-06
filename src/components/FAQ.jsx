@@ -6,12 +6,8 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'Môžem vám darovať kvety?',
-      answer: 'Najviac nás poteší finančný dar na našu spoločnú budúcnosť. Pokiaľ nás chcete predsalen obdarovať kvetmi, viac nám urobia radosť rastlinky v kvetináči. Ale radšej nie ;)'
-    },
-    {
-      question: 'Môžeme vám darovať alkohol?',
-      answer: 'Keďže alkohol veľmi nepijeme, viac nás poteší finančný dar alebo niečo zo zoznamu.'
+      question: 'Môžem prísť len na obrad?',
+      answer: 'Chápeme, že by ste radi prišli aspoň na obrad, ale obrad aj hostinu máme v úzkom kruhu a len pre pozvaných hostí. Ide najmä o kapacitu a organizáciu. Budeme veľmi radi, keď sa stretneme inokedy na posedení alebo večeri!'
     },
     {
       question: 'Je obrad vonku?',
@@ -41,6 +37,14 @@ const FAQ = () => {
     {
       question: 'Kde môžem prenocovať?',
       answer: 'V sekcii "Doprava · Ubytovanie" nájdete odporúčané hotely a penzióny v okolí. Je potrebné si rezervovať vopred. Odporúčame aj Airbnb alebo Booking.'
+    },
+          {
+      question: 'Môžem vám darovať kvety?',
+      answer: 'Najviac nás poteší finančný dar na našu spoločnú budúcnosť. Pokiaľ nás chcete predsalen obdarovať kvetmi, viac nám urobia radosť rastlinky v kvetináči. Ale radšej nie ;)'
+    },
+    {
+      question: 'Môžeme vám darovať alkohol?',
+      answer: 'Keďže alkohol veľmi nepijeme, viac nás poteší finančný dar alebo niečo zo zoznamu.'
     },
     {
       question: 'Dá sa aj stanovať priamo na mieste?',

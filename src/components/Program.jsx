@@ -5,31 +5,31 @@ const Program = () => {
     {
       time: '15:00',
       title: 'Obrad',
-      description: 'Svadobný obrad priamo v areáli Stodole Pohanské.',
+      description: 'Svadobný obrad priamo v areáli Stodoly Pohanské v prírode.',
       image: '/images/program_images/obrad.png'
     },
     {
       time: '16:15',
       title: 'Fotenie a gratulácie',
-      description: 'Fotenie v krásnom prostredí stodoly.',
+      description: 'Fotenie s nami, mladomanželmi, kamaráti, rodina, každý s každým. Bude profi fotograf!',
       image: '/images/program_images/fotenie.png'
     },
     {
       time: '18:00',
       title: 'Večera',
-      description: 'Slávnostná večera a príhovory.',
+      description: 'Príhovory, prípitky a spoločná večera.',
       image: '/images/program_images/vecera.png'
     },
     {
       time: '19:30',
       title: 'Program',
-      description: 'Príďte a uvidíte ;)        ',
+      description: 'Príďte a uvidíte ;)',
       image: '/images/program_images/program.png'
     },
     {
       time: '23:30',
       title: 'Torta a zábava',
-      description: 'Tanec, hudba a oslava do ranných hodín',
+      description: 'Unikátna torta, hry, čepčenie a tancovaniee!',
       image: '/images/program_images/zabava.png'
     },
       {

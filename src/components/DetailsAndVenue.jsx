@@ -53,7 +53,7 @@ const DetailsAndVenue = () => {
               </div>
               <h3 className="font-serif text-2xl text-gray-800 mb-4 text-center font-bold">Kedy</h3>
               <p className="font-serif text-xl text-gray-700 text-center mb-2 font-medium">
-                Piatok
+                Sobota
               </p>
               <p className="font-serif text-3xl text-sage text-center mb-4 font-bold">
                 30. 5. 2026
@@ -106,7 +106,7 @@ const DetailsAndVenue = () => {
                 Cocktail / Semi-formal
               </p>
               <p className="font-serif text-base text-gray-600 text-center leading-relaxed">
-                Prídte ako len sa cítite najlepšie!
+                Prídte ako sa cítite najlepšie!
               </p>
             </div>
           </div>
