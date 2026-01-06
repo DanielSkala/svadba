@@ -25,7 +25,34 @@ function App() {
       <SectionDivider color="#FFFFFF" />
 
       {/* Wedding invitation opening animation */}
-      <section className="bg-white py-8 md:py-12">
+      <section className="relative py-12 md:py-16 overflow-hidden bg-gradient-to-b from-white via-[#fdfcfa] to-white">
+        {/* Subtle centered floral watermark */}
+        <div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none"
+          style={{ opacity: 0.06 }}
+        >
+          <img
+            src="/images/wedding_leaves/leaves_circular.png"
+            alt=""
+            className="w-[80%] max-w-3xl"
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* Corner florals - very subtle */}
+        <img
+          src="/images/wedding_leaves/three_roses_t.png"
+          alt=""
+          className="absolute top-20 -left-10 w-48 md:w-64 opacity-[0.08] pointer-events-none rotate-12"
+          aria-hidden="true"
+        />
+        <img
+          src="/images/wedding_leaves/three_roses_t.png"
+          alt=""
+          className="absolute top-20 -right-10 w-48 md:w-64 opacity-[0.08] pointer-events-none -rotate-12 scale-x-[-1]"
+          aria-hidden="true"
+        />
+
         <InvitationOpen
           autoOpen={true}
           openPercent={0.8}
