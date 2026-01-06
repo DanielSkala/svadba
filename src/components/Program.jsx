@@ -21,7 +21,7 @@ const Program = () => {
       image: '/images/program_images/vecera.png'
     },
     {
-      time: '19:00',
+      time: '19:30',
       title: 'Program',
       description: 'Príďte a uvidíte ;)        ',
       image: '/images/program_images/program.png'

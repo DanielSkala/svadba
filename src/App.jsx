@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import SectionDivider from './components/SectionDivider';
 import AnimatedSection from './components/AnimatedSection';
+import InvitationOpen from './components/InvitationOpen';
 import 'leaflet/dist/leaflet.css';
 
 // Lazy load below-fold components to prioritize video loading
@@ -22,6 +23,16 @@ function App() {
       <Hero />
       {/* Elegant transition from Hero to content */}
       <SectionDivider color="#FFFFFF" />
+
+      {/* Wedding invitation opening animation */}
+      <section className="bg-white py-8 md:py-12">
+        <InvitationOpen
+          autoOpen={true}
+          openPercent={0.8}
+          triggerOnScroll={true}
+        />
+      </section>
+
       <Suspense fallback={<div className="min-h-screen" />}>
         <AnimatedSection>
           <DetailsAndVenue />

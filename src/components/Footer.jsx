@@ -81,6 +81,20 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      {/* Decorative flowers */}
+      <img
+        src="/images/wedding_leaves/rose_corner.png"
+        alt=""
+        className="absolute bottom-0 right-0 w-80 md:w-96 lg:w-[32rem] opacity-60 pointer-events-none transform scale-y-[-1]"
+        aria-hidden="true"
+      />
+      <img
+        src="/images/wedding_leaves/leaf_in_corner.png"
+        alt=""
+        className="absolute bottom-0 left-0 w-64 md:w-80 lg:w-96 opacity-50 pointer-events-none transform scale-y-[-1]"
+        aria-hidden="true"
+      />
     </footer>
   );
 };

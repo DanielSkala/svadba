@@ -1,0 +1,235 @@
+/* InvitationOpen.css - Tri-fold wedding invitation animation
+ *
+ * Layout: [Left Flap 25%] [Center 50%] [Right Flap 25%]
+ *
+ * CLOSED: Flaps at 180deg/-180deg, back faces visible
+ *         Shows: Veronika (left) + Daniel (right) from front.png
+ *
+ * OPEN: Flaps at ~0deg, front faces visible
+ *       Shows: DETAILY + Main + PROGRAM from back.png
+ */
+
+.trifold-stage {
+  --perspective: 2000px;
+  --max-width: 800px;
+  --aspect-ratio: 1.5; /* width / height of full unfolded invitation */
+  --duration: 1300ms;
+  --easing: cubic-bezier(0.22, 1, 0.36, 1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  perspective: var(--perspective);
+}
+
+/* Container = full unfolded width (100%) */
+.trifold-container {
+  position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  aspect-ratio: var(--aspect-ratio);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  /* Reset button styles */
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.trifold-container:focus-visible {
+  outline: 3px solid #92B085;
+  outline-offset: 8px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   CENTER PANEL (25% - 75%)
+   Shows center 50% of back.png (insideSrc)
+   ============================================ */
+.trifold-center {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 8px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Center image: pre-cropped, just fill container */
+.trifold-img-center {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+
+/* ============================================
+   FLAP BASE STYLES
+   Each flap = 25% of container width
+   ============================================ */
+.trifold-flap {
+  --flap-angle: 0deg;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  transform-style: preserve-3d;
+  transform: rotateY(var(--flap-angle));
+  transition: transform var(--duration) var(--easing);
+  will-change: transform;
+  z-index: 10;
+}
+
+.trifold-flap.no-transition {
+  transition: none;
+}
+
+/* LEFT FLAP: position 0-25%, hinge at RIGHT edge (x=25%) */
+.trifold-flap-left {
+  left: 0;
+  transform-origin: right center;
+}
+
+/* RIGHT FLAP: position 75-100%, hinge at LEFT edge (x=75%) */
+.trifold-flap-right {
+  right: 0;
+  transform-origin: left center;
+}
+
+/* ============================================
+   FLAP FACES
+   ============================================ */
+.trifold-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Front face - visible at 0deg (OPEN state) */
+.trifold-face-front {
+  background: #fff;
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.1),
+    0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Back face - pre-rotated 180deg, visible when flap at 180deg (CLOSED state) */
+.trifold-face-back {
+  transform: rotateY(180deg);
+  background: #faf9f7;
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08),
+    0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ============================================
+   IMAGE STYLES
+
+   Using pre-cropped images - each image fills its container
+   ============================================ */
+.trifold-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* ============================================
+   SHADOWS & DEPTH
+   ============================================ */
+.trifold-flap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  background: linear-gradient(
+    to var(--shadow-dir, right),
+    rgba(0, 0, 0, 0.08) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity var(--duration) var(--easing);
+  pointer-events: none;
+  z-index: 100;
+}
+
+.trifold-flap-left::after {
+  right: -15px;
+  --shadow-dir: right;
+}
+
+.trifold-flap-right::after {
+  left: -15px;
+  --shadow-dir: left;
+}
+
+.trifold-container.is-open .trifold-flap::after {
+  opacity: 0.8;
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .trifold-flap {
+    transition: none;
+  }
+  .trifold-flap::after {
+    transition: none;
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 480px) {
+  .trifold-stage {
+    --max-width: 98%;
+    padding: 2rem 0.25rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .trifold-stage {
+    --max-width: 95%;
+    padding: 2.5rem 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .trifold-stage {
+    --max-width: 700px;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .trifold-stage {
+    --max-width: 800px;
+  }
+}
+
+/* High DPI optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .trifold-img {
+    image-rendering: auto;
+  }
+}
