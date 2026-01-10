@@ -27,7 +27,7 @@ const Program = () => {
       image: '/images/program_images/program.png'
     },
     {
-      time: '23:30',
+      time: '21:30',
       title: 'Torta a zábava',
       description: 'Unikátna torta, hry, čepčenie a tancovaniee!',
       image: '/images/program_images/zabava.png'

@@ -120,12 +120,13 @@ const FAQ = () => {
             Máte ďalšie otázky?
           </p>
           <a
-            href="#rsvp"
+            href="mailto:danko.skala@gmail.com"
             className="inline-block px-6 py-2 border border-sage text-sage rounded-full font-serif text-base hover:bg-sage hover:text-white transition-all duration-300"
           >
-            Kontaktujte nás
+            Napíšte nám
           </a>
         </div>
+
       </div>
     </section>
   );

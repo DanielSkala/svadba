@@ -411,9 +411,48 @@ export default function TravelMap() {
           </div>
         </div>
 
-        <p className="mt-4 text-center font-serif text-xs text-gray-500">
-          *Ceny sú orientačné. Obrázky sú ilustračné - navštívte stránky ubytovania pre aktuálne fotografie.
-        </p>
+        {/* Accommodation info box */}
+        <div className="mt-10 bg-sage/5 border border-sage/20 rounded-2xl p-6 sm:p-8">
+          <h3 className="font-serif text-xl sm:text-2xl text-gray-800 font-semibold mb-4 text-center">
+            Kde sa ubytovať?
+          </h3>
+          <div className="font-serif text-gray-600 space-y-3 max-w-3xl mx-auto">
+            <p>
+              Ubytovania uvedené vyššie sú odporúčania priamo od Stodoly Pohanské - mali by byť overené a kvalitné, no nič nevieme garantovať.
+            </p>
+            <p>
+              <strong>Ďalšie možnosti:</strong>
+            </p>
+            <ul className="list-disc list-inside space-y-2 ml-2">
+              <li>
+                Hľadajte na{" "}
+                <a
+                  href="https://www.airbnb.com/s/M%C3%BDto-pod-%C4%8Eumbierom--Slovakia/homes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage hover:text-sage/80 underline underline-offset-2"
+                >
+                  Airbnb - Mýto pod Ďumbierom
+                </a>
+              </li>
+              <li>
+                Skúste{" "}
+                <a
+                  href="https://www.booking.com/searchresults.html?ss=M%C3%BDto+pod+%C4%8Eumbierom"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sage hover:text-sage/80 underline underline-offset-2"
+                >
+                  Booking.com
+                </a>
+                {" "}pre ďalšie možnosti v okolí
+              </li>
+              <li>
+                Pre dobrodružnejšie duše - môžete si postaviť stan priamo v areáli Stodoly Pohanské alebo na priľahlej lúke
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

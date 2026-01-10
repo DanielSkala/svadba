@@ -175,6 +175,7 @@ const InvitationOpen = ({
           </div>
         </div>
       </button>
+      <p className="trifold-hint">Klikni ma</p>
     </div>
   );
 };
