@@ -6,10 +6,6 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'Môžem prísť len na obrad?',
-      answer: 'Chápeme, že by ste radi prišli aspoň na obrad, ale obrad aj hostinu máme v úzkom kruhu a len pre pozvaných hostí. Ide najmä o kapacitu a organizáciu. Budeme veľmi radi, keď sa stretneme inokedy na posedení alebo večeri!'
-    },
-    {
       question: 'Je obrad vonku?',
       answer: 'Áno, obrad sa bude konať vonku na terase stodoly. V prípade nepriaznivého počasia máme pripravený záložný plán v interiéri.'
     },
