@@ -28,7 +28,7 @@ const FAQ = () => {
     },
     {
       question: 'Do kedy mám potvrdiť účasť?',
-      answer: 'Prosíme o potvrdenie účasti najneskôr do 15. Apríla 2025, aby sme mohli dokončiť organizačné detaily.'
+      answer: 'Prosíme o potvrdenie účasti najneskôr do 15. Apríla 2026, aby sme mohli dokončiť organizačné detaily.'
     },
     {
       question: 'Kde môžem prenocovať?',
@@ -36,7 +36,7 @@ const FAQ = () => {
     },
           {
       question: 'Môžem vám darovať kvety?',
-      answer: 'Najviac nás poteší finančný dar na našu spoločnú budúcnosť. Pokiaľ nás chcete predsalen obdarovať kvetmi, viac nám urobia radosť rastlinky v kvetináči. Ale radšej nie ;)'
+      answer: 'Najviac nás poteší finančný dar na našu spoločnú budúcnosť. Pokiaľ nás chcete predsalen obdarovať kvetmi, viac nám urobia radosť rastlinky v kvetináči.'
     },
     {
       question: 'Môžeme vám darovať alkohol?',

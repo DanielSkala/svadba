@@ -11,7 +11,7 @@ const Program = () => {
     {
       time: '16:15',
       title: 'Fotenie a gratulácie',
-      description: 'Fotenie s nami, mladomanželmi, kamaráti, rodina, každý s každým. Bude profi fotograf!',
+      description: 'Fotenie s mladomanželmi, kamarátmi a rodinou. Bude profi fotograf!',
       image: '/images/program_images/fotenie.png'
     },
     {
