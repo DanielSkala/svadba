@@ -194,9 +194,13 @@ const DetailsAndVenue = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Info Box */}
           <div className="bg-sage/5 border-2 border-sage/20 rounded-2xl p-8">
+            <p className="font-serif text-xl text-gray-700 leading-relaxed mb-4">
+              🅿 Parkovanie je zabezpečené priamo pri stodole.
+            </p>
+            <p className="font-serif text-xl text-sage font-semibold leading-relaxed mb-4">
+              👨‍✈️ Nebojte sa, máme zabezpečeného šoféra, ktorý vás odvezie späť na vaše ubytovanie v okolí po 22:00.
+            </p>
             <p className="font-serif text-xl text-gray-700 leading-relaxed">
-              Parkovanie je zabezpečené priamo pri stodole.
-              <br className="hidden sm:block" />
               Tešíme sa na vás!
             </p>
           </div>
