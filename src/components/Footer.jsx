@@ -26,7 +26,7 @@ const Footer = () => {
             Veronika & Daniel
           </p>
           <p className="font-serif text-base text-gray-600">
-            30. mája 2025
+            30. mája 2026
           </p>
         </div>
 
