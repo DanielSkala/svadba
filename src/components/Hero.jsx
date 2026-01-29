@@ -169,9 +169,11 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 animate-bounce" aria-hidden="true">
-        <div className="w-6 h-10 rounded-full border-2 border-white/90 bg-white/20 backdrop-blur-sm flex items-start justify-center p-2 shadow-2xl">
-          <div className="w-1.5 h-1.5 bg-white rounded-full" />
+      <div className="absolute bottom-4 sm:bottom-6 inset-x-0 flex justify-center z-10" aria-hidden="true">
+        <div className="animate-bounce">
+          <div className="w-6 h-10 rounded-full border-2 border-white/90 bg-white/20 backdrop-blur-sm flex items-start justify-center p-2 shadow-2xl">
+            <div className="w-1.5 h-1.5 bg-white rounded-full" />
+          </div>
         </div>
       </div>
 
