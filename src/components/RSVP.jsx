@@ -10,7 +10,7 @@ const RSVP = () => {
             Potvrdenie účasti
           </h2>
           <p className="font-serif text-lg text-gray-700 mt-4">
-            Prosíme, potvrďte svoju účasť do <strong>15. apríla 2025</strong>
+            Prosíme, potvrďte svoju účasť do <strong>15. apríla 2026</strong>
           </p>
         </div>
 

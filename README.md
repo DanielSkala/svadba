@@ -3,7 +3,7 @@
 A beautiful wedding website built with React + Vite + Tailwind CSS.
 
 **Live Site**: https://veronikadanko.sk
-**Wedding Date**: May 30, 2025
+**Wedding Date**: May 30, 2026
 **Venue**: Stodola Pohanské, Myto pod Ďumbierom
 
 ---

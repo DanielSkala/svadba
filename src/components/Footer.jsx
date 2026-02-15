@@ -77,7 +77,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="text-center">
           <p className="font-serif text-xs text-gray-500">
-            © 2025 Veronika & Daniel. Vytvorené s láskou (a Claude Code ;) ).
+            © 2026 Veronika & Daniel. Vytvorené s láskou (a Claude Code ;) ).
           </p>
         </div>
       </div>
