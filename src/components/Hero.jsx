@@ -1,6 +1,95 @@
 import React, { useState, useEffect } from "react";
 import { Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
+const WEDDING_DATE = new Date('2026-05-30T15:00:00+02:00');
+
+const getTimeLeft = () => {
+  const diff = WEDDING_DATE.getTime() - Date.now();
+  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0, isHere: true };
+  return {
+    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((diff / (1000 * 60)) % 60),
+    seconds: Math.floor((diff / 1000) % 60),
+    isHere: false,
+  };
+};
+
+const pad = (n) => String(n).padStart(2, '0');
+
+const Countdown = () => {
+  const [time, setTime] = useState(getTimeLeft);
+
+  useEffect(() => {
+    const id = setInterval(() => setTime(getTimeLeft()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const textShadow = '0 4px 16px rgba(0, 0, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.3)';
+
+  if (time.isHere) {
+    return (
+      <div className="pt-4 sm:pt-6 animate-fade-in">
+        <p
+          className="font-script text-white text-[2rem] sm:text-[2.75rem] md:text-[3.25rem] leading-tight"
+          style={{ textShadow }}
+        >
+          Povedali sme si áno
+          <Heart
+            className="inline-block w-6 h-6 sm:w-8 sm:h-8 ml-2 sm:ml-3 mb-2 text-red-500"
+            fill="currentColor"
+            strokeWidth={1.5}
+            aria-hidden="true"
+          />
+        </p>
+      </div>
+    );
+  }
+
+  const cells = [
+    { value: time.days, label: 'Dní' },
+    { value: time.hours, label: 'Hodín' },
+    { value: time.minutes, label: 'Minút' },
+    { value: time.seconds, label: 'Sekúnd' },
+  ];
+
+  return (
+    <div className="pt-3 sm:pt-5">
+      <p
+        className="font-serif italic text-white/95 text-[0.95rem] sm:text-[1.1rem] md:text-[1.25rem] tracking-[0.25em] uppercase mb-3 sm:mb-4"
+        style={{ textShadow }}
+      >
+        Tešíme sa na vás o
+      </p>
+      <div
+        className="flex justify-center gap-2 sm:gap-3 md:gap-4"
+        role="timer"
+        aria-label="Odpočet do svadby"
+      >
+        {cells.map(({ value, label }) => (
+          <div
+            key={label}
+            className="flex flex-col items-center bg-white/15 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl px-3 sm:px-5 md:px-7 py-2.5 sm:py-3.5 md:py-4 min-w-[64px] sm:min-w-[84px] md:min-w-[104px]"
+          >
+            <span
+              className="font-serif font-semibold text-white tabular-nums leading-none text-[1.85rem] sm:text-[2.5rem] md:text-[3.25rem]"
+              style={{ textShadow }}
+            >
+              {pad(value)}
+            </span>
+            <span
+              className="font-serif text-white/90 text-[0.7rem] sm:text-[0.8rem] md:text-[0.9rem] tracking-[0.2em] uppercase mt-1 sm:mt-1.5"
+              style={{ textShadow }}
+            >
+              {label}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -124,6 +213,8 @@ const Hero = () => {
             Stodola Pohanské, Mýto pod Ďumbierom
           </p>
 
+          {/* Live countdown to the wedding */}
+          <Countdown />
 
         </div>
       </div>

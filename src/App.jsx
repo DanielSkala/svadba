@@ -14,6 +14,9 @@ const Gifts = lazy(() => import('./components/Gifts'));
 const RSVP = lazy(() => import('./components/RSVP'));
 const FAQ = lazy(() => import('./components/FAQ'));
 const Footer = lazy(() => import('./components/Footer'));
+const WeatherForecast = lazy(() => import('./components/WeatherForecast'));
+const Playlist = lazy(() => import('./components/Playlist'));
+const PredictionMarket = lazy(() => import('./components/PredictionMarket'));
 
 
 function App() {
@@ -62,6 +65,12 @@ function App() {
 
       <Suspense fallback={<div className="min-h-screen" />}>
         <AnimatedSection>
+          <Playlist />
+        </AnimatedSection>
+        <AnimatedSection>
+          <WeatherForecast />
+        </AnimatedSection>
+        <AnimatedSection>
           <DetailsAndVenue />
         </AnimatedSection>
         <AnimatedSection>
@@ -78,6 +87,9 @@ function App() {
         </AnimatedSection>
         <AnimatedSection>
           <FAQ />
+        </AnimatedSection>
+        <AnimatedSection>
+          <PredictionMarket />
         </AnimatedSection>
         {/* Elegant transition to Footer */}
         <SectionDivider flip color="#F5F1E8" />
